@@ -1,0 +1,73 @@
+body {
+font-family: Arial, sans-serif ;
+}
+body {
+    background-color:beige
+}
+title {
+    font-size: 50px ;
+}
+h1 {
+    font-size: 40px ;
+}
+p {
+    font-size: 19px;
+}
+body {
+    margin: 0px;
+}
+body {
+    text-align: center; 
+}
+body{
+    margin-top: 80px;
+}
+button {
+    background-color: #2d4468;
+    color: white;
+    border: #1e293b;
+    padding: 18px;
+    border-radius: 19px;
+    cursor: pointer;
+}
+button:hover {
+    background-color:darkgray;
+}
+
+.card {
+background: white;
+border-radius: 12px;
+padding: 20px;
+box-shadow: 0px 5px 15px rgba(0,0,0,0,0.2);
+}
+header {
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    font-size: 24px;
+}
+header {
+ box-shadow: 0 4px 10px rgba(0, 0, 0,0.3);
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header {
+    border-bottom: 3px solid black;
+}
+
+header {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0,0.3);
+    border-bottom: 3px solid black;
+}
