@@ -2,7 +2,7 @@ body {
 font-family: Arial, sans-serif ;
 }
 body {
-    background-color: rgb(255, 255, 255)
+    background-color: rgb(209, 206, 206)
 }
 title {
     font-size: 50px ;
@@ -24,7 +24,7 @@ body{
 }
 button {
     background-color: #2d4468;
-    color: white;
+    color: rgb(255, 255, 255);
     border: #1e293b;
     padding: 18px;
     border-radius: 19px;
