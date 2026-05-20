@@ -1,69 +1,188 @@
-.playfair {
-    font-family: "Playfair Display", serif;
-}
 
 *{
-    margin: 0%;
-    padding: 0%;box-sizing: border-box;
-
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
 }
+
 body{
-    font-family: 'Segoe UI', Tahoma, Verdana, Geneva, Tahoma, sans-serif;
+  background:#f5f7fa;
+  color:#222;
 }
 
-.main{
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
+/* HEADER */
+header{
+  background:#0A2540;
+  color:white;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.navbar {
-    width: 1200px;
-    height: 80px;
-    margin: 0 auto;
-    padding: 0 30px;
-    background: rgba(0, 0, 0, 0.5);   /* pra você ver a navbar */
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  color:#00C853;
 }
 
-.icon{
-    width: 200px;
-    height: 70px;
-    float: left;
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
 }
 
-.logo {
-    color: #009929;
-    font-size: 35px;
-    font-weight: 700;
-    font-family: "Playfair Display", serif;
-    float: left;
-    margin-left: 20px;
-    line-height: 80px;     
+nav a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
 }
 
-.menu {
-    float: right;          
-    height: 80px;
-    line-height: 80px;
+nav a:hover{
+  color:#00C853;
 }
 
-.menu ul{
-    list-style: none;
-    display: flex;
-    gap: 35px;
-    margin: 0;
-    padding: 0;
+.btn{
+  background:#00C853;
+  color:white;
+  padding:10px 18px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:bold;
 }
 
-.menu ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
+/* HERO */
+.hero{
+  height:500px;
+  background:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1400&auto=format&fit=crop') center/cover;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+  color:white;
+  position:relative;
 }
 
-.menu ul li a:hover{
-    color: #009929;
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+  position:relative;
+  max-width:600px;
+}
+
+.hero h1{
+  font-size:52px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:18px;
+  margin-bottom:25px;
+  line-height:1.6;
+}
+
+/* MARKET */
+.market{
+  background:#0A2540;
+  color:white;
+  padding:60px 8%;
+}
+
+.section-title{
+  font-size:34px;
+  margin-bottom:40px;
+}
+
+.market-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.market-card{
+  background:#13385f;
+  padding:25px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.market-card h2{
+  margin-bottom:10px;
+}
+
+.positive{
+  color:#00C853;
+  font-weight:bold;
+}
+
+/* NEWSLETTER */
+.newsletter{
+  background:white;
+  text-align:center;
+  padding:80px 8%;
+}
+
+.newsletter h2{
+  font-size:36px;
+  color:#0A2540;
+  margin-bottom:20px;
+}
+
+.newsletter p{
+  margin-bottom:30px;
+  color:#666;
+}
+
+.newsletter form{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.newsletter input{
+  padding:15px;
+  width:300px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+/* FOOTER */
+footer{
+  background:#0A2540;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-top:50px;
+}
+
+footer p{
+  margin-top:10px;
+  color:#bbb;
+}
+
+@media(max-width:768px){
+
+  nav{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero{
+    height:400px;
+  }
+
 }

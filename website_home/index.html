@@ -1,31 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home | Finnance News & Company</title>
-        
 
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" 
-              rel="stylesheet">
-        
-        <link rel="stylesheet" href="style.css">
-    </head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance News</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-    <div class="main">
-        <div class="navbar">
-            <div class="icon"></div>
-            <h2 class="logo">Finnance News & Company</h2>
-            
-            <!-- MENU -->
-            <div class="menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">SOBRE NÓS</a></li>
-                    <li><a href="#">SERVIÇOS</a></li>
-                    <li><a href="#">DESIGN</a></li>
-                    <li><a href="#">CONTATO</a></li>
-                </ul>
-            </div>
-        </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">FinanceNews</div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Mercado</a></li>
+        <li><a href="#">Economia</a></li>
+        <li><a href="#">Cripto</a></li>
+        <li><a href="#">Investimentos</a></li>
+        <li><a href="#">Empresas</a></li>
+      </ul>
+    </nav>
+
+    <button class="btn">Assinar</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>As principais notícias do mercado financeiro</h1>
+
+      <p>
+        Acompanhe bolsa de valores, criptomoedas, dólar,
+        economia global e investimentos em tempo real.
+      </p>
+
+      <button class="btn">Leia Mais</button>
     </div>
+  </section>
+
+  <!-- MERCADO -->
+  <section class="market">
+
+    <h2 class="section-title" style="color:white;">
+      Mercado em Tempo Real
+    </h2>
+
+    <div class="market-grid">
+
+      <div class="market-card">
+        <h2>IBOV</h2>
+        <p class="positive">+1,25%</p>
+      </div>
+
+      <div class="market-card">
+        <h2>Dólar</h2>
+        <p>R$ 5,12</p>
+      </div>
+
+      <div class="market-card">
+        <h2>Bitcoin</h2>
+        <p class="positive">+4,82%</p>
+      </div>
+
+      <div class="market-card">
+        <h2>Nasdaq</h2>
+        <p class="positive">+0,95%</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+
+    <h2>Receba notícias diariamente</h2>
+
+    <p>
+      Cadastre-se e receba as principais atualizações do mercado financeiro.
+    </p>
+
+    <form>
+      <input type="text" placeholder="Seu nome">
+
+      <input type="email" placeholder="Seu e-mail">
+
+      <button class="btn">Inscrever-se</button>
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h2>FinanceNews</h2>
+
+    <p>
+      © 2026 - Todos os direitos reservados
+    </p>
+
+  </footer>
+
+</body>
+</html>
