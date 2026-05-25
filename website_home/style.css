@@ -186,3 +186,78 @@ footer p{
   }
 
 }
+.carousel{
+width:100%;
+height:550px;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(.45);
+}
+
+.slide-text{
+position:absolute;
+top:50%;
+left:8%;
+transform:translateY(-50%);
+color:white;
+max-width:600px;
+}
+
+.slide-text h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.slide-text p{
+font-size:20px;
+margin-bottom:25px;
+line-height:1.6;
+}
+/* REDES */
+
+.social{
+    margin-top:20px;
+}
+
+.social a{
+    color:#00C853;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.social a:hover{
+    text-decoration:underline;
+}
+.social{
+margin:20px 0;
+display:flex;
+justify-content:center;
+}
+
+.social img{
+width:45px;
+height:45px;
+transition:.3s;
+}
+
+.social img:hover{
+transform:scale(1.2);
+}
