@@ -1,12 +1,12 @@
 :root{
 
-  --bg:#f5f7fa;
-  --text:#222;
-  --header:#0A2540;
-  --card:#13385f;
-  --green:#00C853;
-  --white:#ffffff;
-  --footer:#0A2540;
+  --bg:#ffffff;
+  --text:#264000;
+  --header:#72986a;
+  --card:#264000;
+  --green:#264000;
+  --white:#cceab26b;
+  --footer:#264000;
   
   }
   
@@ -280,7 +280,6 @@
   
   }
   
-  /* RESPONSIVO */
   
   @media(max-width:768px){
   
@@ -305,5 +304,16 @@
   height:400px;
   
   }
+
+  #theme-toggle {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
   
+  }
+  #theme-toggle img {
+    width: 50px;
+    height: 30px;
   }
