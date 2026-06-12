@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceNews</title>
 
-    <link rel="stylesheet" href="frontend/pages/CSS/home.css"
+    <link rel="stylesheet" href="frontend/pages/CSS/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,9 +16,10 @@
 
     <header>
 
-        <div class="logo">
-            FinanceNews
-        </div>
+       <div class="logo">
+    <img src="frontend/pages/CSS/img/logo_2.png" alt="Logo FinanceNews">
+    <span>FinanceNews</span>
+</div>
 
         <nav>
 
@@ -118,31 +120,26 @@
         <div class="market-grid">
 
             <div class="market-card">
-
-                <h3>IBOV</h3>
-                <p class="positive">+1,25%</p>
-
+                <h3>Euro</h3>
+                <p id="euro">Carregando...</p>
             </div>
 
             <div class="market-card">
 
                 <h3>Dólar</h3>
-                <p>R$5,12</p>
-
+                <p id="dolar">Carregando...</p>
             </div>
 
             <div class="market-card">
 
                 <h3>Bitcoin</h3>
-                <p class="positive">+4,82%</p>
-
+                <p id="bitcoin">Carregando...</p>
             </div>
 
             <div class="market-card">
 
-                <h3>Nasdaq</h3>
-                <p class="positive">+0,95%</p>
-
+                <h3>Libra</h3>
+                <p id="libra">Carregando...</p>
             </div>
 
         </div>
@@ -216,7 +213,7 @@
     </footer>
 
 
-    <script src="script.js"></script>
+    <script src="backend/script.js"></script>
 
 </body>
 

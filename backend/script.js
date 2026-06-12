@@ -32,3 +32,40 @@ button.addEventListener("click",()=>{
     : "🌙";
 
 });
+
+async function carregarMoedas() {
+    try {
+        const resposta = await fetch(
+                        "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,GBP-BRL,BTC-BRL"
+
+        );
+            const dados = await resposta.json();
+
+    
+            document.getElementById("dolar").textContent =    
+            "R$" + Number(dados.USDBRL.bid).toFixed(2);
+
+            document.getElementById("euro").textContent =
+            "R$" + Number(dados.EURBRL.bid).toFixed(2);
+
+            document.getElementById("libra").textContent  =
+            "R$" + Number(dados.GBPBRL.bid).toFixed(2);
+
+
+            document.getElementById("bitcoin").textContent =
+            
+            "R$" + Number(dados.BTCBRL.bid).toLocaleString("pt-BR", {
+                minimumFractionDigits: 2
+            });
+
+        } catch (erro) {
+            console.error ("Erro ao carregar moedas:", erro);
+        }
+
+        }
+        carregarMoedas();
+   
+    
+    
+
+

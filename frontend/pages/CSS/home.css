@@ -1,12 +1,30 @@
-:root{
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:28px;
+  font-weight:bold;
+  color:var(--green);
+}
 
-  --bg:#ffffff;
-  --text:#264000;
-  --header:#72986a;
-  --card:#264000;
-  --green:#264000;
-  --white:#cceab26b;
-  --footer:#264000;
+.logo img{
+  width:100px;
+  height:90px;
+  object-fit:contain;
+}
+
+
+
+
+
+:root{
+  --bg:#F5F7F4;
+  --text:#18372C;
+  --header:#18372C;
+  --card:#224638;
+  --green:#4FA37B;
+  --white:#FFFFFF;
+  --footer:#18372C;
   
   }
   
