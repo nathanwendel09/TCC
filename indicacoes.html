@@ -1,178 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indicações</title>
 
-    <link rel="stylesheet" href="frontend/pages/CSS/indicacoes.css">
+
+<link rel="stylesheet" href="frontend/pages/CSS/indicacoes.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
 
-    <header>
-        <div class="logo">
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
         <img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
-         <span>FinnanceNews</span>
-     </div>
+        <span>FinanceNews</span>
+    </div>
 
-     <nav>
-
+    <nav>
         <ul>
-            <li><a href="#">Livros</a></li>
-
+            <li><a href="home.html">Home</a></li>
         </ul>
-     </nav>
+    </nav>
 
-     <div>
-        <button class="btn">
-            Login
-            </button>
-        
-     </div>
-
-    </header>
-
-    <!--Carrossel -->
-
-    <section class="carrousel">
-<div class="slide active">
-
-       <img src="frontend/pages/CSS/assets/img/slide-1.jpg">
-
-       <div class="slide-text">
-
-        <h1>
-            frase
-        </h1>
-
-       <button class="btn">
-        Saiba mais
-       </button>
-
-</div>
-
-</div>
-<div class="slide">
-
-       <img src="frontend/pages/CSS/assets/img/slide-2.jpg">
-
-       <div class="slide-text">
-
-        <h1>
-            frase
-        </h1>
-
-</div>
-
-</div>
-<div class="slide">
-
-       <img src="frontend/pages/CSS/assets/img/slide-3.jpg">
-
-       <div class="slide-text">
-
-        <h1>
-            frase
-        </h1>
-
-</div>
-
-</div>
-
-<div class="slide">
-
-       <img src="frontend/pages/CSS/assets/img/slide-4.jpg">
-
-       <div class="slide-text">
-
-        <h1>
-            frase
-        </h1>
-
-</div>
-
-</div>
-
-<div class="slide">
-
-       <img src="frontend/pages/CSS/assets/img/slide-5.jpg">
-
-       <div class="slide-text">
-
-        <h1>
-            frase
-        </h1>
-
-</div>
-
-</div>
-    </section>
-
-    <!--Meio do site-->
-<section class="center">
-
-    <div class="center-1">
-    <div class="center-text">
-        <h3>Sobre as recomendações</h3>
-        <p>Aqui irá ficar sobre as recoemndações, o que você pode dar uma olhada, no geral são recomendações de livros, que tem o intuito de fazer você (leitor da FN) adquirir conhecimento sbore o mercado financeiro por meio de nossas recomendações.</p>
+    <div>
+        <button class="btn">Login</button>
     </div>
-    </div>
+</header>
 
-</section>
-<section class="indicações">
+<!-- CARROSSEL -->
+<section class="carousel">
 
-  <div class="ind">
-  <div class="center=text">
-    <h3>Conheça algumas de nossas recomendações</h3>
-    <div class="ind-1">
-    <img src="#">
-    </div>
-      <div class="ind-2">
-    <img src="#">
-    </div>
-      <div class="ind-3">
-    <img src="#">
-    </div>
-    
-
-  </div>
-
-</div>
-
-</section>
-
-<footer>
-    <h2>
-        FinanceNews
-    </h2>
-
-    <div class="social-section">
-
-        <h3>
-            Conheça nossas redes sociais
-        </h3>
-        <p>
-            Acompanhe novidades e conteúdos exclusivos
-        </p>
-
-        <div class="=social">
-             <a href="https://instagram.com/finnancesnc" target="_blank">
-
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                        alt="Instagram">
-             </a>
+    <div class="slide active">
+        <img src="frontend/pages/CSS/assets/img/slide-1.jpg" alt="">
+        <div class="slide-text">
+            <h1>Frase</h1>
+            <button class="btn">Saiba mais</button>
         </div>
     </div>
 
-    <p>
-          © 2026 Todos os direitos reservados.
-    </p>
+    <div class="slide">
+        <img src="frontend/pages/CSS/assets/img/slide-2.jpg" alt="">
+        <div class="slide-text">
+            <h1>Frase</h1>
+        </div>
+    </div>
 
+    <div class="slide">
+        <img src="frontend/pages/CSS/assets/img/slide-3.jpg" alt="">
+        <div class="slide-text">
+            <h1>Frase</h1>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="frontend/pages/CSS/assets/img/slide-4.jpg" alt="">
+        <div class="slide-text">
+            <h1>Frase</h1>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="frontend/pages/CSS/assets/img/slide-5.jpg" alt="">
+        <div class="slide-text">
+            <h1>Frase</h1>
+        </div>
+    </div>
+
+</section>
+
+<!-- MEIO DO SITE -->
+<section class="center">
+
+    <div class="center-1">
+        <div class="center-text">
+            <h3>Sobre as recomendações</h3>
+            <p>
+                Aqui você encontra recomendações de livros e materiais para aprender mais sobre o mercado financeiro e economia.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- INDICAÇÕES -->
+<section class="books">
+
+    <h2>Livros recomendados</h2>
+
+    <!-- OUTROS LIVROS -->
+    <div class="books-grid">
+
+        <div class="book-card">
+            <img src="frontend/pages/CSS/assets/img/pai-rico.png" alt="">
+            <h3>Pai Rico, Pai Pobre</h3>
+            <p>Um dos livros mais importantes sobre educação financeira.
+                Ensina como o dinheiro funciona na prática e a diferença entre trabalhar por dinheiro e fazer o dinheiro trabalhar para você.
+            </p></p>
+        </div>
+
+        <div class="book-card">
+            <img src="frontend/pages/CSS/assets/img/psicologia_financeira.png" alt="">
+            <h3>A Psicologia Financeira</h3>
+            <p>Mostra como emoções e comportamento influenciam suas decisões com dinheiro.</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- FOOTER -->
+<footer>
+    <h2>FinanceNews</h2>
+
+    <div class="social-section">
+        <h3>Conheça nossas redes sociais</h3>
+        <p>Acompanhe novidades e conteúdos exclusivos</p>
+
+        <div class="social">
+            <a href="https://instagram.com/finnancesnc" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <p>© 2026 Todos os direitos reservados.</p>
 </footer>
 
 <script src="backend/indicacacoes.js"></script>
+```
 
 </body>
-
 </html>

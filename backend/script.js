@@ -1,70 +1,107 @@
+// ======================
+// CARROSSEL
+// ======================
 
 const slides = document.querySelectorAll(".slide");
-
 let atual = 0;
 
 setInterval(() => {
-
     slides[atual].classList.remove("active");
-
-    atual++;
-
-    if(atual >= slides.length){
-        atual = 0;
-    }
-
+    atual = (atual + 1) % slides.length;
     slides[atual].classList.add("active");
+}, 3000);
 
-},3000);
 
-
-// Modo escuro
+// ======================
+// MODO ESCURO
+// ======================
 
 const button = document.getElementById("theme-toggle");
 
-button.addEventListener("click",()=>{
-
+button.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
-    button.innerHTML =
-    document.body.classList.contains("dark-mode")
-    ? "☀️"
-    : "🌙";
-
+    button.innerHTML = document.body.classList.contains("dark-mode")
+        ? "☀️"
+        : "🌙";
 });
+
+
+// ======================
+// DADOS DE MERCADO (FINTECH)
+// ======================
+
+let ultimosValores = {};
+
+function calcularVariacao(novo, antigo) {
+    if (!antigo) return 0;
+    return ((novo - antigo) / antigo) * 100;
+}
 
 async function carregarMoedas() {
     try {
-        const resposta = await fetch(
-                        "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,GBP-BRL,BTC-BRL"
-
+        const res = await fetch(
+            "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,GBP-BRL,BTC-BRL"
         );
-            const dados = await resposta.json();
 
-    
-            document.getElementById("dolar").textContent =    
-            "R$" + Number(dados.USDBRL.bid).toFixed(2);
+        const data = await res.json();
 
-            document.getElementById("euro").textContent =
-            "R$" + Number(dados.EURBRL.bid).toFixed(2);
+        atualizar("dolar", data.USDBRL.bid);
+        atualizar("euro", data.EURBRL.bid);
+        atualizar("libra", data.GBPBRL.bid);
+        atualizar("bitcoin", data.BTCBRL.bid);
 
-            document.getElementById("libra").textContent  =
-            "R$" + Number(dados.GBPBRL.bid).toFixed(2);
+    } catch (err) {
+        console.log("Erro API:", err);
+    }
+}
 
 
-            document.getElementById("bitcoin").textContent =
-            
-            "R$" + Number(dados.BTCBRL.bid).toLocaleString("pt-BR", {
-                minimumFractionDigits: 2
-            });
+// ======================
+// UPDATE UI FINTECH STYLE
+// ======================
 
-        } catch (erro) {
-            console.error ("Erro ao carregar moedas:", erro);
-        }
+function atualizar(id, valor) {
+    const el = document.getElementById(id);
+    const novo = Number(valor);
+    const antigo = ultimosValores[id];
 
-        }
-        carregarMoedas();
-   
+    const variacao = calcularVariacao(novo, antigo);
+
+    // cor estilo mercado
+    if (variacao > 0) {
+        el.style.color = "#4FA37B";
+    } else if (variacao < 0) {
+        el.style.color = "#ff4d4d";
+    } else {
+        el.style.color = "#fff";
+    }
+
+    ultimosValores[id] = novo;
+
+    el.innerHTML = `
+        R$ ${novo.toFixed(2)}
+        <small style="margin-left:8px; font-size:12px;">
+            ${variacao ? variacao.toFixed(2) + "%" : "--"}
+        </small>
+    `;
+
+    // animação “pulse fintech”
+    el.style.transform = "scale(1.08)";
+    el.style.transition = "0.2s";
+
+    setTimeout(() => {
+        el.style.transform = "scale(1)";
+    }, 200);
+}
+
+
+// ======================
+// AUTO UPDATE (REAL TIME FEEL)
+// ======================
+
+carregarMoedas();
+setInterval(carregarMoedas, 8000);
     
     
 

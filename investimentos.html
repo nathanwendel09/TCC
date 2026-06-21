@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investimentos</title>
+
+    <link rel="stylesheet" href="frontend/pages/CSS/investimentos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="frontend/pages/CSS/assets/img/logo_2.png">
+        <span>FinanceNews</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="home.html"> Home</a></li>
+            <li><a href="indicacoes.html">Indicações</a></li>
+        </ul>
+    </nav>
+
+    <div class="right-header">
+
+        <div class="profile">
+            <button id="profile-btn">☰</button>
+
+            <div class="dropdown" id="profile-dropdown">
+
+                <div class="user-area">
+                    <p id="user-name">Visitante</p>
+                    <button class="login-btn">Login</button>
+                </div>
+
+                <hr>
+
+                <h4>Histórico</h4>
+                <ul id="history-list"></ul>
+
+                <hr>
+
+                <button id="logout">Sair</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Investimentos</h1>
+    <p>Aprenda a investir de forma inteligente.</p>
+</section>
+
+<!-- CARDS -->
+<section class="invest-grid">
+
+    <div class="card">
+        <h3>Renda Fixa</h3>
+        <p>Investimentos seguros como Tesouro Direto e CDB.</p>
+    </div>
+
+    <div class="card">
+        <h3>Renda Variável</h3>
+        <p>Ações com maior risco e retorno.</p>
+    </div>
+
+    <div class="card">
+        <h3>Criptomoedas</h3>
+        <p>Bitcoin e ativos digitais.</p>
+    </div>
+
+</section>
+
+<!-- VIDEOAULAS -->
+<section class="videos">
+
+    <h2>Videoaulas</h2>
+
+    <div class="video-grid">
+
+        <div class="video-card">
+            <h3>O que são investimentos?</h3>
+        </div>
+
+        <div class="video-card">
+            <h3>Como começar do zero</h3>
+        </div>
+
+        <div class="video-card">
+            <h3>Erros de iniciantes</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="backend/investimentos.js"></script>
+
+</body>
+</html>
