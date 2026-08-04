@@ -14,17 +14,7 @@ setInterval(() => {
 
 // ======================
 // MODO ESCURO
-// ======================
-
-const button = document.getElementById("theme-toggle");
-
-button.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    button.innerHTML = document.body.classList.contains("dark-mode")
-        ? "☀️"
-        : "🌙";
-});
+// =====================
 
 
 // ======================

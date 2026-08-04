@@ -35,16 +35,7 @@ body {
   --footer:#18372C;
 }
 
-/* DARK MODE */
-.dark-mode {
-  --bg:#121212;
-  --text:#ffffff;
-  --header:#081b2d;
-  --card:#1e293b;
-  --green:#00E676;
-  --white:#1f1f1f;
-  --footer:#081b2d;
-}
+
 
 /* =========================
    HEADER

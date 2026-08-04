@@ -17,19 +17,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* LOGO */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     color: #4FA37B;
+    font-size: 28px;
     font-weight: bold;
 }
 
 .logo img {
-    width: 60px;
+    width: 90px;
+    height: 80px;
+    object-fit: contain;
 }
 
 /* NAV */
@@ -166,14 +172,29 @@ nav a:hover {
 .video-card {
     background: #224638;
     color: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 12px;
     cursor: pointer;
     transition: 0.2s;
+    display: : block;
+    text-decoration: none;
+    text-align:left;
 }
 
 .video-card:hover {
     transform: scale(1.05);
+}
+
+.video-card img {
+    width: : 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.video-card h3{
+    font-size: 16px;
+    text-align: center;
 }
 
 /* HISTÓRICO */
@@ -189,3 +210,37 @@ nav a:hover {
     border-radius: 8px;
     font-size: 13px;
 }
+
+/* FOOTER */
+footer{
+    background: #18372C;
+    color: white;
+text-align: center;
+padding: 40px;
+
+}
+
+.social-section {
+    margin-top: 25px;
+
+}
+.social-section p{
+    color: #bbb;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+.social img{
+    width: : 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: 0.3s;
+
+}
+
+.social img:hover{
+    transform: scale(1.2);
+} 
