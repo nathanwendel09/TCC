@@ -71,21 +71,8 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* PROFILE */
-.profile {
-    position: relative;
-}
+/* HERO */
 
-#profile-btn {
-    background: rgba(255,255,255,0.1);
-    border: none;
-    color: white;
-    font-size: 20px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
-}
 
 #profile-btn:hover {
     background: rgba(255,255,255,0.2);
@@ -112,23 +99,6 @@ nav a:hover {
 @keyframes fade {
     from {opacity: 0; transform: translateY(-10px);}
     to {opacity: 1; transform: translateY(0);}
-}
-
-/* LOGIN AREA */
-.user-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.login-btn {
-    background: #18372C;
-    color: white;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 8px;
-    cursor: pointer;
 }
 
 /* HERO */
@@ -182,33 +152,29 @@ nav a:hover {
 }
 
 .video-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
 }
 
-.video-card img {
-    width: : 100%;
+.video-thumb {
+    width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
-    display: block;
+    overflow: hidden;
 }
 
-.video-card h3{
+.video-thumb img {
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+}
+
+.video-card:hover .video-thumb img {
+    transform: scale(1.1);
+}
+
+.video-card h3 {
     font-size: 16px;
     text-align: center;
-}
-
-/* HISTÓRICO */
-#history-list {
-    list-style: none;
-    margin-top: 10px;
-}
-
-#history-list li {
-    background: #f2f2f2;
-    padding: 8px;
-    margin-bottom: 6px;
-    border-radius: 8px;
-    font-size: 13px;
 }
 
 /* FOOTER */
@@ -244,3 +210,19 @@ padding: 40px;
 .social img:hover{
     transform: scale(1.2);
 } 
+
+
+/*=========================
+   RESPONSIVO
+   ========================*/
+
+   @media (max-width: 768px) {
+    nav {
+        display: none;
+        
+    }
+    .invest-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+   }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceNews</title>
+    <link rel="stylesheet" href="frontend/pages/CSS/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
+            <span>FinanceNews</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="indicacoes.html">Indicações</a></li>
+                <li><a href="investimentos.html">investimentos</a></li>
+                <li><a href="#">Economia</a></li>
+                <li><a href="#">Notícias</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!--LOGIN / CADASTRO -->
+    <section class="auth-wrapper">
+
+        <div class="auth-card">
+<button class="tab-btn active" id="tab-login" type="button">Entrar</button>
+<button class="tab-btn" id="tab-cadastro" type="button">Criar conta</button>
+     </div>
+
+     <!-- FORM LOGIN -->
+     <form id="form-login" class="auth-form active">
+     <label  for="login-email">E-mail</label>
+     <input type="email" id="login-email" name="email" placeholder="seuemail@exemplo.com" required>
+
+     <label  for="login-senha">Senha</label>
+     <input type="password" id="login-senha" name="senha" placeholder="Sua senha" required>
+
+     <p class="form-error" id="login-error"></p>
+
+     <button type="submit" class="btn auth-submit">Entrar</button>
+     </form>
+
+
+     <!-- FORM CADASTRO -->
+
+    <form id="form-cadastro" class="auth-form">
+     
+        <label for="cad-nome">Nome</label>
+        <input type="text" id="cad-nome" name="nome" placeholder="Seu nome completo" required>
+
+        <label for="cad-email">E-mail</label>
+        <input type="email" id="cad-email" name="email" placeholder="seuemail@exemplo.com" required>
+
+        <label for="cad-senha">Senha</label>
+        <input type= "password" id="cad-senha" name="senha" placeholder="Crie uma senha" required minlength="6">
+
+        <label for="cad-confirmar">Confirmar senha</label>
+        <input type="password" id="cad-confirmar" name="confirmar_senha" placeholder="Repita a senha" required minlength="6">
+
+        <p class="form-error" id="cadastro-error"></p>
+
+        <button type="submit" class="btn auth-submit">Criar conta</button>
+
+    </form>
+
+</div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+<h2>FinanceNews</h2>
+
+<div class="social-section">
+<h3>Conheça nossas redes sociais</h3>
+<p>Acompanhe conteúdos exclusivos</p>
+
+<div class="social">
+<a href="https://instagram.com/finnancesnc" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+</a>
+</div>
+
+</div>
+
+<p>© 2026 Todos os direitos reservados.</p>
+</footer>
+
+<script src="backend/login.js"></script>
+
+
+</body>
+</html>

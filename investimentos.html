@@ -2,109 +2,111 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investimentos</title>
-
-    <link rel="stylesheet" href="frontend/pages/CSS/investimentos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investimentos</title>
+<link rel="stylesheet" href="frontend/pages/CSS/investimentos.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
 
-    <div class="logo">
-        <img src="frontend/pages/CSS/assets/img/logo_2.png">
-        <span>FinanceNews</span>
-    </div>
+<div class="logo">
+<img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
+<span>FinanceNews</span>
+</div>
 
-    <nav>
-        <ul>
-            <li><a href="home.html"> Home</a></li>
-            <li><a href="indicacoes.html">Indicações</a></li>
-            <li><a href="#"> Economia</a></li>
-            <li><a href="#"> Notícias</a></li>
-            <li><a href="#"> Notícias recentes</a></li>
-        </ul>
-    </nav>
+<nav>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="indicacoes.html">Indicações</a></li>
+<li><a href="#">Economia</a></li>
+<li><a href="#">Notícias</a></li>
+<li><a href="#">Notícias recentes</a></li>
+</ul>
+</nav>
 
-    <div class="right-header">
-
-        <div class="profile">
-            <button id="profile-btn">☰</button>
-
-            <div class="dropdown" id="profile-dropdown">
-
-                <div class="user-area">
-                    <p id="user-name">Visitante</p>
-                    <button class="login-btn">Login</button>
-                </div>
-
-                <hr>
-
-                <h4>Histórico</h4>
-                <ul id="history-list"></ul>
-
-                <hr>
-
-                <button id="logout">Sair</button>
-
-            </div>
-        </div>
-
-    </div>
+<div>
+<button class="btn">Login</button>
+</div>
 
 </header>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>Investimentos</h1>
-    <p>Aprenda a investir de forma inteligente.</p>
+<h1>Investimentos</h1>
+<p>Aprenda a investir de forma inteligente.</p>
 </section>
+
+<!-- CARDS -->
+<section class="invest-grid">
+
+<div class="card">
+<h3>Renda Fixa</h3>
+<p>Investimentos seguros como Tesouro Direto e CDB.</p>
+</div>
+
+<div class="card">
+<h3>Renda Variável</h3>
+<p>Ações com maior risco e retorno.</p>
+</div>
+
+<div class="card">
+<h3>Criptomoedas</h3>
+<p>Bitcoin e ativos digitais.</p>
+</div>
+
+</section>
+
 <!-- VIDEOAULAS -->
 <section class="videos">
+<h2>Videoaulas</h2>
 
-    <h2>Videoaulas</h2>
+<div class="video-grid">
 
-    <div class="video-grid">
-        <a class="video-card" href="https://www.youtube.com/watch?v=VDPBFao6QiM" target="_blank" rel="noopener">
-            <img src="https://img.youtube.com/vi/VDPBFao6QiM/hqdefault.jpg" alt="O que são investimentos?">
-            <h3>O que são investimentos?</h3>
-            </a>
-             
-            <a class="video-card" href="https://www.youtube.com/watch?v=cI8kEzas3RI" target="_blank" rel="noopener">
-            <img src="https://img.youtube.com/vi/cI8kEzas3RI/hqdefault.jpg" alt="Como começar do zero">
-            <h3>Como começar do zero</h3>
-            </a>
-            <a class="video-card" href="https://www.youtube.com/watch?v=J-xyTrP8zCc" target="_blank" rel="noopener">
-<img src="https://img.youtube.com/vi/J-xyTrP8zCc/hqdefault.jpg" alt="Erros de iniciantes">
-<h3>Erros de iniciantes</h3>
+<a class="video-card" href="https://youtu.be/25ScX8Ixhm4" target="_blank" rel="noopener">
+<div class="video-thumb">
+<img src="https://img.youtube.com/vi/25ScX8Ixhm4/hqdefault.jpg" alt="Investimento do zero">
+</div>
+<h3>Investimento do zero</h3>
 </a>
 
-        </div>
+<a class="video-card" href="https://youtu.be/zAJgVIOw6KU" target="_blank" rel="noopener">
+<div class="video-thumb">
+<img src="https://img.youtube.com/vi/zAJgVIOw6KU/hqdefault.jpg" alt="Investimentos seguros">
+</div>
+<h3>Investimentos seguros</h3>
+</a>
 
-    </div>
+<a class="video-card" href="https://youtu.be/OpLp6SpjQa0" target="_blank" rel="noopener">
+<div class="video-thumb">
+<img src="https://img.youtube.com/vi/OpLp6SpjQa0/hqdefault.jpg" alt="Aula completa sobre CDB">
+</div>
+<h3>Aula completa sobre CDB</h3>
+</a>
 
+</div>
 </section>
-<!--FOOTER-->
+
+<!-- FOOTER -->
 <footer>
-    <h2>FinanceNews</h2>
+<h2>FinanceNews</h2>
 
-    <div class="social-section">
-        <h3>Conheça nossas redes sociais</h3>
-        <p>Acompanhe novidades e conteúdos exclusivos</p>
+<div class="social-section">
+<h3>Conheça nossas redes sociais</h3>
+<p>Acompanhe novidades e conteúdos exclusivos</p>
 
-        <div class="social">
-            <a href="https://instagram.com/finnancesnc" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-            </div>
-             
-            </div>
-             
-            <p>© 2026 Todos os direitos reservados.</p>
+<div class="social">
+<a href="https://instagram.com/finnancesnc" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+</a>
+</div>
 
+</div>
+
+<p>© 2026 Todos os direitos reservados.</p>
 </footer>
 
 <script src="backend/investimentos.js"></script>
