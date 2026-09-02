@@ -8,13 +8,12 @@
 :root{
     --bg:#F5F7F4;
     --text: #18372C;
-    --header: #18372C ;
-    --card: #224638; 
+    --header: #18372C;
+    --card: #224638;
     --green: #4FA37B;
     --white: #fff;
-    --footer: #18372C;
+    --footer: #18372C;-
     --error: #ff4d4d;
-    
 }
 
 body{
@@ -35,7 +34,6 @@ header{
     position: sticky;
     top: 0;
     z-index: 1000;
-
 }
 
 .logo{
@@ -63,26 +61,23 @@ nav a{
     color:white;
     text-decoration: none;
     transition: .3s;
-
 }
 
 nav a:hover{
     color: var(--green);
-
 }
 
 .btn{
-    background:var(--green);
+    background: var(--green);
     border: none;
     padding: 12px 20px;
     border-radius: 8px;
     color: white;
     font-weight: bold;
     cursor: pointer;
-
 }
 
-/*AUTH SECTION*/
+/* AUTH SECTION */
 
 .auth-wrapper{
     flex: 1;
@@ -98,15 +93,13 @@ nav a:hover{
     max-width: 420px;
     border-radius: 16px;
     padding: 30px;
-    box-shadow: 0 15px 35px rgba (0,0,0,0.1);
-
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
 .auth-tabs{
     display: flex;
     gap: 10px;
     margin-bottom: 28px;
-
 }
 
 .tab-btn{
@@ -127,15 +120,14 @@ nav a:hover{
     opacity: 1;
     color: var(--green);
     border-bottom: 3px solid var(--green);
-
 }
 
 .auth-form{
     display: none;
     flex-direction: column;
     gap: 6px;
-
 }
+
 .auth-form.active{
     display: flex;
 }
@@ -144,10 +136,10 @@ nav a:hover{
     font-size: 13px;
     font-weight: 600;
     margin-top: 10px;
-
 }
 
 .auth-form input{
+    width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -159,9 +151,26 @@ nav a:hover{
     border-color: var(--green);
 }
 
-.auth-form input:focus{
-    outline: none;
-    border-color: var(--green);
+/* botão de mostrar/ocultar senha, nosso, não depende do navegador */
+.password-field{
+    position: relative;
+}
+
+.password-field input{
+    padding-right: 42px;
+}
+
+.toggle-senha{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    padding: 4px;
 }
 
 .auth-submit{
@@ -173,7 +182,6 @@ nav a:hover{
     color: var(--error);
     font-size: 13px;
     min-height: 18px;
-
 }
 
 /* FOOTER */
@@ -182,7 +190,6 @@ footer{
     color: white;
     text-align: center;
     padding: 30px;
-
 }
 
 .social-section{
@@ -191,14 +198,12 @@ footer{
 
 .social-section p{
     color: #bbb;
-
 }
 
 .social{
     display: flex;
     justify-content: center;
     gap: 20px;
-
 }
 
 .social img{
@@ -206,21 +211,19 @@ footer{
     height: 40px;
     object-fit: contain;
     transition: .3s;
-
 }
 
 .social img:hover{
-    transform: :scale(1.2);
-
+    transform: scale(1.2);
 }
 
-/*========================
-    RESPONSIVO
-=========================*/
+/* =========================
+   RESPONSIVO
+========================= */
 
 @media (max-width: 768px) {
     nav {
-        display: :none;
+        display: none;
     }
 
     .auth-card{
