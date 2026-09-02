@@ -1,232 +1,226 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
 
-:root{
-    --bg:#F5F7F4;
-    --text: #18372C;
-    --header: #18372C;
-    --card: #224638;
-    --green: #4FA37B;
-    --white: #fff;
-    --footer: #18372C;-
-    --error: #ff4d4d;
-}
+        :root{
+            --bg:#F5F7F4;
+            --text: #18372C;
+            --header: #18372C;
+            --card: #224638;
+            --green: #4FA37B;
+            --white: #fff;
+            --footer: #18372C;
+            --error: #ff4d4d;
+        }
 
-body{
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+        body{
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-/* HEADER */
-header{
-    background: var(--header);
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+        /* HEADER */
+        header{
+            background: var(--header);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: var(--green);
-    font-size: 28px;
-    font-weight: bold;
-}
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--green);
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-.logo img{
-    width: 90px;
-    height: 80px;
-    object-fit: contain;
-}
+        .logo img{
+            width: 90px;
+            height: 80px;
+            object-fit: contain;
+        }
 
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
 
-nav a{
-    color:white;
-    text-decoration: none;
-    transition: .3s;
-}
+        nav a{
+            color:white;
+            text-decoration: none;
+            transition: .3s;
+        }
 
-nav a:hover{
-    color: var(--green);
-}
+        nav a:hover{
+            color: var(--green);
+        }
 
-.btn{
-    background: var(--green);
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
+        .btn{
+            background: var(--green);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-/* AUTH SECTION */
+        /* AUTH SECTION */
+        .auth-wrapper{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 8%;
+        }
 
-.auth-wrapper{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 8%;
-}
+        .auth-card{
+            background: var(--white);
+            width: 100%;
+            max-width: 420px;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
 
-.auth-card{
-    background: var(--white);
-    width: 100%;
-    max-width: 420px;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
+        .auth-tabs{
+            display: flex;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
 
-.auth-tabs{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 28px;
-}
+        .tab-btn{
+            flex: 1;
+            background: none;
+            border: none;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 15px;
+            color: var(--text);
+            opacity: .5;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: .2s;
+        }
 
-.tab-btn{
-    flex: 1;
-    background: none;
-    border: none;
-    padding: 12px;
-    font-weight: bold;
-    font-size: 15px;
-    color: var(--text);
-    opacity: .5;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    transition: .2s;
-}
+        .tab-btn.active{
+            opacity: 1;
+            color: var(--green);
+            border-bottom: 3px solid var(--green);
+        }
 
-.tab-btn.active{
-    opacity: 1;
-    color: var(--green);
-    border-bottom: 3px solid var(--green);
-}
+        .auth-form{
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+        }
 
-.auth-form{
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-}
+        .auth-form.active{
+            display: flex;
+        }
 
-.auth-form.active{
-    display: flex;
-}
+        .auth-form label{
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
 
-.auth-form label{
-    font-size: 13px;
-    font-weight: 600;
-    margin-top: 10px;
-}
+        .auth-form input{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
 
-.auth-form input{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-}
+        .auth-form input:focus{
+            outline: none;
+            border-color: var(--green);
+        }
 
-.auth-form input:focus{
-    outline: none;
-    border-color: var(--green);
-}
+        .password-field{
+            position: relative;
+        }
 
-/* botão de mostrar/ocultar senha, nosso, não depende do navegador */
-.password-field{
-    position: relative;
-}
+        .password-field input{
+            padding-right: 42px;
+        }
 
-.password-field input{
-    padding-right: 42px;
-}
+        .toggle-senha{
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1;
+            padding: 4px;
+        }
 
-.toggle-senha{
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 1;
-    padding: 4px;
-}
+        .auth-submit{
+            margin-top: 20px;
+            width: 100%;
+        }
 
-.auth-submit{
-    margin-top: 20px;
-    width: 100%;
-}
+        .form-error{
+            color: var(--error);
+            font-size: 13px;
+            min-height: 18px;
+        }
 
-.form-error{
-    color: var(--error);
-    font-size: 13px;
-    min-height: 18px;
-}
+        /* FOOTER */
+        footer{
+            background: var(--footer);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
 
-/* FOOTER */
-footer{
-    background: var(--footer);
-    color: white;
-    text-align: center;
-    padding: 30px;
-}
+        .social-section{
+            margin-top: 25px;
+        }
 
-.social-section{
-    margin-top: 25px;
-}
+        .social-section p{
+            color: #bbb;
+        }
 
-.social-section p{
-    color: #bbb;
-}
+        .social{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.social{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        .social img{
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            transition: .3s;
+        }
 
-.social img{
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    transition: .3s;
-}
+        .social img:hover{
+            transform: scale(1.2);
+        }
 
-.social img:hover{
-    transform: scale(1.2);
-}
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
 
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media (max-width: 768px) {
-    nav {
-        display: none;
-    }
-
-    .auth-card{
-        padding: 20px;
-    }
-}
+            .auth-card{
+                padding: 20px;
+            }
+        }
