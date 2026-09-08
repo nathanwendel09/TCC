@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - FinanceNews</title>
+    <link rel="stylesheet" href="frontend/pages/CSS/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <!-- LADO ESQUERDO: MARCA -->
+    <div class="brand-panel">
+
+        <a href="home.html" class="brand-logo">
+            <img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
+            <span>FinanceNews</span>
+        </a>
+
+        <div class="brand-content">
+            <h1>Seu mercado financeiro, todo dia, num só lugar.</h1>
+            <p>Notícias, indicações de leitura e videoaulas pra você entender e investir com mais confiança.</p>
+
+            <ul class="brand-features">
+                <li><span class="icon">📈</span> Cotações e indicadores em tempo real</li>
+                <li><span class="icon">📚</span> Indicações de livros sobre finanças</li>
+                <li><span class="icon">🎓</span> Videoaulas sobre investimentos</li>
+            </ul>
+        </div>
+
+        <div class="brand-shape shape-1"></div>
+        <div class="brand-shape shape-2"></div>
+    </div>
+
+    <!-- LADO DIREITO: FORMULÁRIO -->
+    <div class="form-panel">
+
+        <a href="home.html" class="back-link">← Voltar para o site</a>
+
+        <div class="auth-center">
+        <div class="auth-box">
+
+            <div class="auth-tabs">
+                <button class="tab-btn active" id="tab-login" type="button">Entrar</button>
+                <button class="tab-btn" id="tab-cadastro" type="button">Criar conta</button>
+            </div>
+
+            <!-- FORM LOGIN -->
+            <form id="form-login" class="auth-form active">
+
+                <h2>Bem-vindo de volta</h2>
+                <p class="auth-subtitle">Entre com sua conta para continuar.</p>
+
+                <label for="login-email">E-mail</label>
+                <input type="email" id="login-email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                <label for="login-senha">Senha</label>
+                <div class="password-field">
+                    <input type="password" id="login-senha" name="senha" placeholder="Sua senha" required>
+                    <button type="button" class="toggle-senha" data-target="login-senha">👁️</button>
+                </div>
+
+                <p class="form-error" id="login-error"></p>
+
+                <button type="submit" class="btn auth-submit">Entrar</button>
+            </form>
+
+            <!-- FORM CADASTRO -->
+            <form id="form-cadastro" class="auth-form">
+
+                <h2>Crie sua conta</h2>
+                <p class="auth-subtitle">Leva menos de um minuto.</p>
+
+                <label for="cad-nome">Nome</label>
+                <input type="text" id="cad-nome" name="nome" placeholder="Seu nome completo" required>
+
+                <label for="cad-email">E-mail</label>
+                <input type="email" id="cad-email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                <label for="cad-senha">Senha</label>
+                <div class="password-field">
+                    <input type="password" id="cad-senha" name="senha" placeholder="Crie uma senha" required minlength="6">
+                    <button type="button" class="toggle-senha" data-target="cad-senha">👁️</button>
+                </div>
+
+                <label for="cad-confirmar">Confirmar senha</label>
+                <div class="password-field">
+                    <input type="password" id="cad-confirmar" name="confirmar_senha" placeholder="Repita a senha" required minlength="6">
+                    <button type="button" class="toggle-senha" data-target="cad-confirmar">👁️</button>
+                </div>
+
+                <p class="form-error" id="cadastro-error"></p>
+
+                <button type="submit" class="btn auth-submit">Criar conta</button>
+            </form>
+
+        </div>
+        </div>
+
+        <p class="auth-footer">© 2026 FinanceNews. Todos os direitos reservados.</p>
+
+    </div>
+
+</div>
+
+<script src="backend/login.js"></script>
+
+</body>
+</html>

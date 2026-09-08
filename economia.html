@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economia - FinanceNews</title>
+<link rel="stylesheet" href="frontend/pages/CSS/economia.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
+<span>FinanceNews</span>
+</div>
+
+<nav>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="indicacoes.html">Indicações</a></li>
+<li><a href="investimentos.html">Investimentos</a></li>
+<li><a href="noticias.html">Notícias</a></li>
+<li><a href="noticias-recentes.html">Notícias recentes</a></li>
+</ul>
+</nav>
+
+<div>
+<button class="btn" onclick="window.location.href='login.html'">Login</button>
+</div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Economia</h1>
+<p>Os principais indicadores econômicos do Brasil, atualizados direto da fonte oficial.</p>
+</section>
+
+<!-- DICAS -->
+<section class="dicas">
+
+<h2>Dicas rápidas de economia</h2>
+
+<div class="dicas-grid">
+
+<div class="dica-card">
+<span class="dica-icone">💰</span>
+<h3>Regra dos 50-30-20</h3>
+<p>50% da renda para necessidades, 30% para desejos e 20% para poupança e investimentos.</p>
+</div>
+
+<div class="dica-card">
+<span class="dica-icone">🛟</span>
+<h3>Monte uma reserva de emergência</h3>
+<p>Guarde de 3 a 6 meses das suas despesas em um investimento de fácil resgate.</p>
+</div>
+
+<div class="dica-card">
+<span class="dica-icone">📝</span>
+<h3>Anote seus gastos</h3>
+<p>Registrar tudo que você gasta evita surpresas desagradáveis no fim do mês.</p>
+</div>
+
+<div class="dica-card">
+<span class="dica-icone">⚠️</span>
+<h3>Cuidado com juros altos</h3>
+<p>Cartão de crédito rotativo e cheque especial estão entre os juros mais caros do mercado.</p>
+</div>
+
+<div class="dica-card">
+<span class="dica-icone">📊</span>
+<h3>Diversifique</h3>
+<p>Não coloque todo seu dinheiro numa única classe de investimento — divida o risco.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- INDICADORES -->
+<section class="indicadores">
+
+<div class="indicador-card">
+<h3>Taxa Selic</h3>
+<p class="valor"><span id="selic">Carregando...</span><span class="trend" id="selic-trend"></span></p>
+<p class="data" id="selic-data"></p>
+<p class="explicacao">Taxa básica de juros da economia, definida pelo Copom.</p>
+</div>
+
+<div class="indicador-card">
+<h3>IPCA</h3>
+<p class="valor"><span id="ipca">Carregando...</span><span class="trend" id="ipca-trend"></span></p>
+<p class="data" id="ipca-data"></p>
+<p class="explicacao">Índice oficial de inflação do Brasil (variação mensal).</p>
+</div>
+
+<div class="indicador-card">
+<h3>IGP-M</h3>
+<p class="valor"><span id="igpm">Carregando...</span><span class="trend" id="igpm-trend"></span></p>
+<p class="data" id="igpm-data"></p>
+<p class="explicacao">Índice usado para reajuste de aluguéis e contratos (variação mensal).</p>
+</div>
+
+<div class="indicador-card">
+<h3>Dólar comercial</h3>
+<p class="valor"><span id="dolar">Carregando...</span><span class="trend" id="dolar-trend"></span></p>
+<p class="data" id="dolar-data"></p>
+<p class="explicacao">Cotação de compra do dólar americano (PTAX, Banco Central).</p>
+</div>
+
+</section>
+
+<!-- GRÁFICO BITCOIN -->
+<section class="grafico-section">
+<h2>Bitcoin — últimos 7 dias</h2>
+<p class="grafico-sub">Cotação em dólar (USD), atualizada em tempo real via Binance.</p>
+
+<div class="grafico-card">
+<canvas id="bitcoin-chart"></canvas>
+</div>
+</section>
+
+<p class="fonte">Fonte: Sistema Gerenciador de Séries Temporais (SGS) do Banco Central do Brasil.</p>
+
+<!-- FOOTER -->
+<footer>
+<h2>FinanceNews</h2>
+
+<div class="social-section">
+<h3>Conheça nossas redes sociais</h3>
+<p>Acompanhe novidades e conteúdos exclusivos</p>
+
+<div class="social">
+<a href="https://instagram.com/finnancesnc" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+</a>
+</div>
+
+</div>
+
+<p>© 2026 Todos os direitos reservados.</p>
+</footer>
+
+<script src="backend/economia.js"></script>
+
+</body>
+</html>

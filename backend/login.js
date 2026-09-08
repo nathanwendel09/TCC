@@ -23,7 +23,7 @@ tabCadastro.addEventListener("click", () => {
 
 
 // ======================
-// MOSTRAR / OCULTAR SENHA (botão nosso, não é o do navegador)
+// MOSTRAR / OCULTAR SENHA
 // ======================
 
 document.querySelectorAll(".toggle-senha").forEach((botao) => {
@@ -72,7 +72,6 @@ formLogin.addEventListener("submit", async (e) => {
     //         return;
     //     }
     //
-    //     // guarda sessão/token e redireciona
     //     localStorage.setItem("financenews_usuario", JSON.stringify(data.usuario));
     //     window.location.href = "home.html";
     //
@@ -135,7 +134,6 @@ formCadastro.addEventListener("submit", async (e) => {
     //         return;
     //     }
     //
-    //     // conta criada, redireciona pro login ou já loga o usuário
     //     tabLogin.click();
     //
     // } catch (err) {

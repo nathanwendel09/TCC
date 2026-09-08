@@ -1,226 +1,336 @@
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Inter", sans-serif;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
 
-        :root{
-            --bg:#F5F7F4;
-            --text: #18372C;
-            --header: #18372C;
-            --card: #224638;
-            --green: #4FA37B;
-            --white: #fff;
-            --footer: #18372C;
-            --error: #ff4d4d;
-        }
+:root{
+    --bg:#F5F7F4;
+    --text: #18372C;
+    --header: #18372C;
+    --card: #224638;
+    --green: #4FA37B;
+    --white: #fff;
+    --footer: #18372C;
+    --error: #ff4d4d;
+}
 
-        body{
-            background: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+body{
+    color: var(--text);
+}
 
-        /* HEADER */
-        header{
-            background: var(--header);
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+.auth-page{
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    min-height: 100vh;
+}
 
-        .logo{
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--green);
-            font-size: 28px;
-            font-weight: bold;
-        }
+/* ============================
+   LADO ESQUERDO - MARCA
+============================ */
 
-        .logo img{
-            width: 90px;
-            height: 80px;
-            object-fit: contain;
-        }
+.brand-panel{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, var(--header), #0e241c);
+    color: white;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        nav ul{
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
+.brand-logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--green);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 2;
+}
 
-        nav a{
-            color:white;
-            text-decoration: none;
-            transition: .3s;
-        }
+.brand-logo img{
+    width: 60px;
+    height: 55px;
+    object-fit: contain;
+}
 
-        nav a:hover{
-            color: var(--green);
-        }
+.brand-content{
+    z-index: 2;
+    max-width: 480px;
+}
 
-        .btn{
-            background: var(--green);
-            border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
+.brand-content h1{
+    font-size: 40px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
 
-        /* AUTH SECTION */
-        .auth-wrapper{
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 8%;
-        }
+.brand-content p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfe3d8;
+    margin-bottom: 35px;
+}
 
-        .auth-card{
-            background: var(--white);
-            width: 100%;
-            max-width: 420px;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
+.brand-features{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
 
-        .auth-tabs{
-            display: flex;
-            gap: 10px;
-            margin-bottom: 28px;
-        }
+.brand-features li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #e8f2ec;
+}
 
-        .tab-btn{
-            flex: 1;
-            background: none;
-            border: none;
-            padding: 12px;
-            font-weight: bold;
-            font-size: 15px;
-            color: var(--text);
-            opacity: .5;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: .2s;
-        }
+.brand-features .icon{
+    font-size: 20px;
+}
 
-        .tab-btn.active{
-            opacity: 1;
-            color: var(--green);
-            border-bottom: 3px solid var(--green);
-        }
+.brand-shape{
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(79, 163, 123, 0.18);
+    z-index: 1;
+}
 
-        .auth-form{
-            display: none;
-            flex-direction: column;
-            gap: 6px;
-        }
+.shape-1{
+    width: 320px;
+    height: 320px;
+    right: -100px;
+    top: -100px;
+}
 
-        .auth-form.active{
-            display: flex;
-        }
+.shape-2{
+    width: 220px;
+    height: 220px;
+    left: -80px;
+    bottom: -80px;
+    background: rgba(79, 163, 123, 0.12);
+}
 
-        .auth-form label{
-            font-size: 13px;
-            font-weight: 600;
-            margin-top: 10px;
-        }
+/* ============================
+   LADO DIREITO - FORMULÁRIO
+============================ */
 
-        .auth-form input{
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 14px;
-        }
+.form-panel{
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
 
-        .auth-form input:focus{
-            outline: none;
-            border-color: var(--green);
-        }
+.back-link{
+    align-self: flex-start;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: .7;
+    transition: .2s;
+}
 
-        .password-field{
-            position: relative;
-        }
+.back-link:hover{
+    opacity: 1;
+    color: var(--green);
+}
 
-        .password-field input{
-            padding-right: 42px;
-        }
+.auth-center{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .toggle-senha{
-            position: absolute;
-            right: 8px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            line-height: 1;
-            padding: 4px;
-        }
+.auth-box{
+    width: 100%;
+    max-width: 380px;
+}
 
-        .auth-submit{
-            margin-top: 20px;
-            width: 100%;
-        }
+.auth-tabs{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    background: #e7ebe6;
+    border-radius: 12px;
+    padding: 4px;
+}
 
-        .form-error{
-            color: var(--error);
-            font-size: 13px;
-            min-height: 18px;
-        }
+.tab-btn{
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text);
+    opacity: .6;
+    cursor: pointer;
+    transition: .2s;
+}
 
-        /* FOOTER */
-        footer{
-            background: var(--footer);
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
+.tab-btn:active{
+    transform: scale(0.96);
+}
 
-        .social-section{
-            margin-top: 25px;
-        }
+.tab-btn.active{
+    opacity: 1;
+    background: var(--white);
+    color: var(--green);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
 
-        .social-section p{
-            color: #bbb;
-        }
+.auth-form{
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+}
 
-        .social{
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+.auth-form.active{
+    display: flex;
+    animation: authFadeIn .35s ease;
+}
 
-        .social img{
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-            transition: .3s;
-        }
+@keyframes authFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        .social img:hover{
-            transform: scale(1.2);
-        }
+.auth-form h2{
+    font-size: 24px;
+    margin-bottom: 4px;
+}
 
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
+.auth-subtitle{
+    font-size: 14px;
+    color: #6b7c75;
+    margin-bottom: 20px;
+}
 
-            .auth-card{
-                padding: 20px;
-            }
-        }
+.auth-form label{
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.auth-form input{
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d7ddd9;
+    border-radius: 10px;
+    font-size: 14px;
+    background: var(--white);
+}
+
+.auth-form input:focus{
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(79,163,123,0.15);
+}
+
+.password-field{
+    position: relative;
+}
+
+.password-field input{
+    padding-right: 42px;
+}
+
+.toggle-senha{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    padding: 4px;
+}
+
+.btn{
+    background: var(--green);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:hover{
+    background: #418f6a;
+}
+
+.auth-submit{
+    margin-top: 22px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.form-error{
+    color: var(--error);
+    font-size: 13px;
+    min-height: 18px;
+    margin-top: 8px;
+}
+
+.auth-footer{
+    margin-top: 30px;
+    font-size: 12px;
+    color: #8a9a92;
+    text-align: center;
+}
+
+/* ============================
+   RESPONSIVO
+============================ */
+
+@media (max-width: 900px) {
+
+    .auth-page{
+        grid-template-columns: 1fr;
+    }
+
+    .brand-panel{
+        padding: 35px 30px;
+        min-height: 280px;
+    }
+
+    .brand-content h1{
+        font-size: 28px;
+    }
+
+    .brand-content p{
+        margin-bottom: 20px;
+    }
+
+    .brand-features{
+        display: none;
+    }
+
+    .form-panel{
+        padding: 30px 20px 50px;
+    }
+
+    .back-link{
+        margin-bottom: 20px;
+    }
+}

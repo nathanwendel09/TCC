@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    background: #F5F7F4;
+    color: #18372C;
+}
+
+/* HEADER */
+header{
+    background: #18372C;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #4FA37B;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo img{
+    width: 90px;
+    height: 80px;
+    object-fit: contain;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover{
+    color: #4FA37B;
+}
+
+.btn{
+    background: linear-gradient(135deg, #4FA37B, #3b7f5f);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+}
+
+/* HERO */
+.hero{
+    padding: 60px 8%;
+    text-align: center;
+    background: #18372C;
+    color: white;
+}
+
+.hero h1{
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.hero p{
+    color: #cfe3d8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* DICAS */
+.dicas{
+    padding: 60px 8% 20px;
+}
+
+.dicas h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dicas-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+}
+
+.dica-card{
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: .2s;
+}
+
+.dica-card:hover{
+    transform: translateY(-4px);
+}
+
+.dica-icone{
+    font-size: 28px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.dica-card h3{
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.dica-card p{
+    font-size: 13px;
+    color: #56655d;
+    line-height: 1.5;
+}
+
+/* INDICADORES */
+.indicadores{
+    padding: 40px 8% 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.trend{
+    font-size: 16px;
+    margin-left: 6px;
+}
+
+.trend.up{
+    color: #4FA37B;
+}
+
+.trend.down{
+    color: #ff6b6b;
+}
+
+/* GRÁFICO BITCOIN */
+.grafico-section{
+    padding: 0 8% 60px;
+}
+
+.grafico-section h2{
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.grafico-sub{
+    text-align: center;
+    font-size: 13px;
+    color: #7c8b84;
+    margin-bottom: 25px;
+}
+
+.grafico-card{
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    max-width: 900px;
+    margin: 0 auto;
+    height: 320px;
+}
+
+.indicador-card{
+    background: #224638;
+    color: white;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    transition: .2s;
+}
+
+.indicador-card:hover{
+    transform: translateY(-5px);
+}
+
+.indicador-card h3{
+    font-size: 16px;
+    color: #cfe3d8;
+    margin-bottom: 10px;
+}
+
+.indicador-card .valor{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.indicador-card .data{
+    font-size: 12px;
+    color: #a9c2b6;
+    margin-bottom: 12px;
+}
+
+.indicador-card .explicacao{
+    font-size: 13px;
+    color: #cfe3d8;
+    line-height: 1.4;
+}
+
+.fonte{
+    text-align: center;
+    font-size: 12px;
+    color: #7c8b84;
+    padding-bottom: 40px;
+}
+
+/* FOOTER */
+footer{
+    background: #18372C;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.social-section{
+    margin-top: 25px;
+}
+
+.social-section p{
+    color: #bbb;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: .3s;
+}
+
+.social img:hover{
+    transform: scale(1.2);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+}
