@@ -181,14 +181,51 @@ footer{
     margin-bottom: 10px;
 }
 
-/* GRID */
-.books-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+/* CARROSSEL */
+.books-carousel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.books-track {
+    display: flex;
     gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 4px 4px 12px;
+    flex: 1;
+}
+
+.books-track::-webkit-scrollbar {
+    display: none;
+}
+
+.books-track {
+    scrollbar-width: none;
+}
+
+.carousel-btn {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: var(--card);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.carousel-btn:hover {
+    background: var(--green);
 }
 
 .book-card {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
     background: var(--card);
     color: white;
     padding: 15px;
@@ -232,5 +269,13 @@ footer{
 
   .carousel {
     height: 300px;
+  }
+
+  .book-card {
+    flex-basis: 220px;
+  }
+
+  .carousel-btn {
+    display: none;
   }
 }

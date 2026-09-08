@@ -1,145 +1,176 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indicações</title>
-
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indicações</title>
 <link rel="stylesheet" href="frontend/pages/CSS/indicacoes.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-
 <!-- HEADER -->
 <header>
-    <div class="logo">
-        <img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
-        <span>FinanceNews</span>
-    </div>
 
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="investimentos.html">Investimentos</a></li>
-            <li><a href="economia.html">Economia</a></li>
-            <li><a href="#">Notícias</a></li>
-            <li><a href="#">Notícias recentes</a></li>
-        </ul>
-    </nav>
+<div class="logo">
+<img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
+<span>FinanceNews</span>
+</div>
 
-    <div>
-        <button class="btn"><a style="color: white; text-decoration: none;" href="login.html">Login</a></button>
-    </div>
+<nav>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="investimentos.html">Investimentos</a></li>
+<li><a href="economia.html">Economia</a></li>
+<li><a href="#">Notícias</a></li>
+<li><a href="#">Notícias recentes</a></li>
+</ul>
+</nav>
+
+<div>
+<button class="btn">Login</button>
+</div>
 
 </header>
 
 <!-- CARROSSEL -->
 <section class="carousel">
 
-    <div class="slide active">
-        <img src="frontend/pages/CSS/assets/img/slide-1.jpg" alt="">
-        <div class="slide-text">
-            <h1>Frase</h1>
-            <button class="btn">Saiba mais</button>
-        </div>
-    </div>
+<div class="slide active">
+<img src="frontend/pages/CSS/assets/img/slide-1.jpg" alt="">
+<div class="slide-text">
+<h1>Frase</h1>
+<button class="btn">Saiba mais</button>
+</div>
+</div>
 
-    <div class="slide">
-        <img src="frontend/pages/CSS/assets/img/slide-2.jpg" alt="">
-        <div class="slide-text">
-            <h1>Frase</h1>
-        </div>
-    </div>
+<div class="slide">
+<img src="frontend/pages/CSS/assets/img/slide-2.jpg" alt="">
+<div class="slide-text">
+<h1>Frase</h1>
+</div>
+</div>
 
-    <div class="slide">
-        <img src="frontend/pages/CSS/assets/img/slide-3.jpg" alt="">
-        <div class="slide-text">
-            <h1>Frase</h1>
-        </div>
-    </div>
+<div class="slide">
+<img src="frontend/pages/CSS/assets/img/slide-3.jpg" alt="">
+<div class="slide-text">
+<h1>Frase</h1>
+</div>
+</div>
 
-    <div class="slide">
-        <img src="frontend/pages/CSS/assets/img/slide-4.jpg" alt="">
-        <div class="slide-text">
-            <h1>Frase</h1>
-        </div>
-    </div>
+<div class="slide">
+<img src="frontend/pages/CSS/assets/img/slide-4.jpg" alt="">
+<div class="slide-text">
+<h1>Frase</h1>
+</div>
+</div>
 
-    <div class="slide">
-        <img src="frontend/pages/CSS/assets/img/slide-5.jpg" alt="">
-        <div class="slide-text">
-            <h1>Frase</h1>
-        </div>
-    </div>
+<div class="slide">
+<img src="frontend/pages/CSS/assets/img/slide-5.jpg" alt="">
+<div class="slide-text">
+<h1>Frase</h1>
+</div>
+</div>
 
 </section>
 
 <!-- MEIO DO SITE -->
 <section class="center">
-
-    <div class="center-1">
-        <div class="center-text">
-            <h3>Sobre as recomendações</h3>
-            <p>
-                Aqui você encontra recomendações de livros e materiais para aprender mais sobre o mercado financeiro e economia.
-            </p>
-        </div>
-    </div>
-
+<div class="center-1">
+<div class="center-text">
+<h3>Sobre as recomendações</h3>
+<p>
+Aqui você encontra recomendações de livros e materiais para aprender mais sobre o mercado financeiro e economia.
+</p>
+</div>
+</div>
 </section>
 
 <!-- INDICAÇÕES -->
 <section class="books">
+<h2>Livros recomendados</h2>
 
-    <h2>Livros recomendados</h2>
+<!-- OUTROS LIVROS -->
+<div class="books-carousel">
 
-    <!-- OUTROS LIVROS -->
-    <div class="books-grid">
+<button class="carousel-btn prev" id="livros-prev" aria-label="Livro anterior">‹</button>
 
-        <div class="book-card">
-            <img src="frontend/pages/CSS/assets/img/pai-rico.png" alt="">
-            <h3>Pai Rico, Pai Pobre</h3>
-            <p>Um dos livros mais importantes sobre educação financeira.
-                Ensina como o dinheiro funciona na prática e a diferença entre trabalhar por dinheiro e fazer o dinheiro trabalhar para você.
-            </p>
-            <a class="btn" href="https://www.amazon.com.br/Pai-rico-pai-pobre-anos/dp/8550801488" target="_blank" rel="noopener">Comprar na Amazon</a>
-        </div>
+<div class="books-track" id="livros-track">
 
-        <div class="book-card">
-            <img src="frontend/pages/CSS/assets/img/psicologia_financeira.png" alt="">
-            <h3>A Psicologia Financeira</h3>
-            <p>Mostra como emoções e comportamento influenciam suas decisões com dinheiro.</p>
-        <a class="btn" href="https://www.amazon.com.br/psicologia-financeira-atemporais-gan%C3%A2ncia-felicidade/dp/6555111100" target="_blank" rel="noopener">Comprar na Amazon</a>
-        </div>
+<div class="book-card">
+<img src="frontend/pages/CSS/assets/img/pai-rico.png" alt="">
+<h3>Pai Rico, Pai Pobre</h3>
+<p>Um dos livros mais importantes sobre educação financeira.
+Ensina como o dinheiro funciona na prática e a diferença entre trabalhar por dinheiro e fazer o dinheiro trabalhar para você.
+</p>
+<a class="btn" href="https://www.amazon.com.br/Pai-rico-pai-pobre-anos/dp/8550801488" target="_blank" rel="noopener">Comprar na Amazon</a>
+</div>
 
-    </div>
+<div class="book-card">
+<img src="frontend/pages/CSS/assets/img/psicologia_financeira.png" alt="">
+<h3>A Psicologia Financeira</h3>
+<p>Mostra como emoções e comportamento influenciam suas decisões com dinheiro.</p>
+<a class="btn" href="https://www.amazon.com.br/psicologia-financeira-atemporais-gan%C3%A2ncia-felicidade/dp/6555111100" target="_blank" rel="noopener">Comprar na Amazon</a>
+</div>
 
+<div class="book-card">
+<img src="frontend/pages/CSS/assets/img/mente-milionaria.png" alt="">
+<h3>Os Segredos da Mente Milionária</h3>
+<p>T. Harv Eker mostra como os padrões de pensamento sobre dinheiro, criados desde a infância, moldam o sucesso financeiro — e como reprogramá-los.</p>
+<a class="btn" href="https://www.amazon.com.br/s?k=Os+Segredos+da+Mente+Milion%C3%A1ria+T.+Harv+Eker" target="_blank" rel="noopener">Comprar na Amazon</a>
+</div>
+
+<div class="book-card">
+<img src="frontend/pages/CSS/assets/img/homem-mais-rico-babilonia.png" alt="">
+<h3>O Homem Mais Rico da Babilônia</h3>
+<p>Parábolas ambientadas na Babilônia antiga que ensinam lições atemporais sobre poupança, investimento e juros compostos.</p>
+<a class="btn" href="https://www.amazon.com.br/s?k=O+Homem+Mais+Rico+da+Babil%C3%B4nia+George+Clason" target="_blank" rel="noopener">Comprar na Amazon</a>
+</div>
+
+<div class="book-card">
+<img src="frontend/pages/CSS/assets/img/mil-ao-milhao.png" alt="">
+<h3>Do Mil ao Milhão</h3>
+<p>Thiago Nigro, o Primo Rico, mostra como sair do zero e construir patrimônio sem cortar os pequenos prazeres do dia a dia.</p>
+<a class="btn" href="https://www.amazon.com.br/s?k=Do+Mil+ao+Milh%C3%A3o+Thiago+Nigro" target="_blank" rel="noopener">Comprar na Amazon</a>
+</div>
+
+<div class="book-card">
+<img src="frontend/pages/CSS/assets/img/investidor-inteligente.png" alt="">
+<h3>O Investidor Inteligente</h3>
+<p>O clássico de Benjamin Graham sobre investimento em valor, considerado leitura obrigatória por Warren Buffett.</p>
+<a class="btn" href="https://www.amazon.com.br/s?k=O+Investidor+Inteligente+Benjamin+Graham" target="_blank" rel="noopener">Comprar na Amazon</a>
+</div>
+
+</div>
+
+<button class="carousel-btn next" id="livros-next" aria-label="Próximo livro">›</button>
+
+</div>
 </section>
+
+
 <!-- FOOTER -->
 <footer>
-    <h2>FinanceNews</h2>
+<h2>FinanceNews</h2>
 
-    <div class="social-section">
-        <h3>Conheça nossas redes sociais</h3>
-        <p>Acompanhe novidades e conteúdos exclusivos</p>
+<div class="social-section">
+<h3>Conheça nossas redes sociais</h3>
+<p>Acompanhe novidades e conteúdos exclusivos</p>
 
-        <div class="social">
-            <a href="https://instagram.com/finnancesnc" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-        </div>
-    </div>
+<div class="social">
+<a href="https://instagram.com/finnancesnc" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+</a>
+</div>
 
-    <p>© 2026 Todos os direitos reservados.</p>
+</div>
+
+<p>© 2026 Todos os direitos reservados.</p>
 </footer>
 
 <script src="backend/indicacacoes.js"></script>
-```
 
 </body>
 </html>
