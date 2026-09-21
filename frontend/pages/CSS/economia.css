@@ -29,6 +29,7 @@ header{
     color: #4FA37B;
     font-size: 28px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .logo img{
@@ -53,6 +54,10 @@ nav a:hover{
     color: #4FA37B;
 }
 
+nav a.active{
+    color: #4FA37B;
+}
+
 .btn{
     background: linear-gradient(135deg, #4FA37B, #3b7f5f);
     border: none;
@@ -62,6 +67,8 @@ nav a:hover{
     font-weight: 600;
     cursor: pointer;
     transition: 0.25s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover{

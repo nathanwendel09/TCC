@@ -30,6 +30,7 @@ header {
     color: #4FA37B;
     font-size: 28px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .logo img {
@@ -55,6 +56,10 @@ nav a:hover {
     color: #4FA37B;
 }
 
+nav a.active {
+    color: #4FA37B;
+}
+
 /* BOTÃO */
 .btn {
     background: linear-gradient(135deg, #4FA37B, #3b7f5f);
@@ -65,40 +70,12 @@ nav a:hover {
     font-weight: 600;
     cursor: pointer;
     transition: 0.25s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-}
-
-/* HERO */
-
-
-#profile-btn:hover {
-    background: rgba(255,255,255,0.2);
-}
-
-/* DROPDOWN */
-.dropdown {
-    position: absolute;
-    right: 0;
-    top: 45px;
-    width: 280px;
-    background: white;
-    border-radius: 14px;
-    padding: 14px;
-    display: none;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    animation: fade 0.2s ease;
-}
-
-.dropdown.active {
-    display: block;
-}
-
-@keyframes fade {
-    from {opacity: 0; transform: translateY(-10px);}
-    to {opacity: 1; transform: translateY(0);}
 }
 
 /* HERO */
@@ -146,9 +123,9 @@ nav a:hover {
     border-radius: 12px;
     cursor: pointer;
     transition: 0.2s;
-    display: : block;
+    display: block;
     text-decoration: none;
-    text-align:left;
+    text-align: left;
 }
 
 .video-card:hover {
@@ -178,51 +155,50 @@ nav a:hover {
 }
 
 /* FOOTER */
-footer{
+footer {
     background: #18372C;
     color: white;
-text-align: center;
-padding: 40px;
-
+    text-align: center;
+    padding: 40px;
 }
 
 .social-section {
     margin-top: 25px;
-
 }
-.social-section p{
+
+.social-section p {
     color: #bbb;
 }
+
 .social {
     display: flex;
     justify-content: center;
     gap: 20px;
-
 }
-.social img{
-    width: : 40px;
+
+.social img {
+    width: 40px;
     height: 40px;
     object-fit: contain;
     transition: 0.3s;
-
 }
 
-.social img:hover{
+.social img:hover {
     transform: scale(1.2);
-} 
+}
 
-
-/*=========================
+/* =========================
    RESPONSIVO
-   ========================*/
+========================= */
 
-   @media (max-width: 768px) {
-    nav {
-        display: none;
-        
-    }
-    .invest-grid,
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
-   }
+@media (max-width: 768px) {
+
+  nav {
+    display: none;
+  }
+
+  .invest-grid,
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
