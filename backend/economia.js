@@ -11,7 +11,14 @@ const SERIES = {
     dolar: 1      // Dólar comercial (compra)
 };
 
-async function carregarIndicador(id, codigoSerie, sufixo) {
+function formatarNumero(valor) {
+    return Number(valor).toLocaleString("pt-BR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+}
+
+async function carregarIndicador(id, codigoSerie, prefixo, sufixo) {
     const valorEl = document.getElementById(id);
     const dataEl = document.getElementById(id + "-data");
     const trendEl = document.getElementById(id + "-trend");
@@ -29,7 +36,7 @@ async function carregarIndicador(id, codigoSerie, sufixo) {
         const ultimo = data[data.length - 1];
         const anterior = data.length > 1 ? data[data.length - 2] : null;
 
-        valorEl.textContent = `${Number(ultimo.valor).toFixed(2)}${sufixo}`;
+        valorEl.textContent = `${prefixo}${formatarNumero(ultimo.valor)}${sufixo}`;
         dataEl.textContent = `Atualizado em ${ultimo.data}`;
 
         if (anterior) {
@@ -55,10 +62,10 @@ async function carregarIndicador(id, codigoSerie, sufixo) {
     }
 }
 
-carregarIndicador("selic", SERIES.selic, "%");
-carregarIndicador("ipca", SERIES.ipca, "%");
-carregarIndicador("igpm", SERIES.igpm, "%");
-carregarIndicador("dolar", SERIES.dolar, " R$");
+carregarIndicador("selic", SERIES.selic, "", "%");
+carregarIndicador("ipca", SERIES.ipca, "", "%");
+carregarIndicador("igpm", SERIES.igpm, "", "%");
+carregarIndicador("dolar", SERIES.dolar, "R$ ", "");
 
 
 // ======================

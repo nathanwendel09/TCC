@@ -37,94 +37,122 @@
 <!-- HERO -->
 <section class="hero">
 <h1>Economia</h1>
-<p>Os principais indicadores econômicos do Brasil, atualizados direto da fonte oficial.</p>
-</section>
-
-<!-- DICAS -->
-<section class="dicas">
-
-<h2>Dicas rápidas de economia</h2>
-
-<div class="dicas-grid">
-
-<div class="dica-card">
-<span class="dica-icone">💰</span>
-<h3>Regra dos 50-30-20</h3>
-<p>50% da renda para necessidades, 30% para desejos e 20% para poupança e investimentos.</p>
-</div>
-
-<div class="dica-card">
-<span class="dica-icone">🛟</span>
-<h3>Monte uma reserva de emergência</h3>
-<p>Guarde de 3 a 6 meses das suas despesas em um investimento de fácil resgate.</p>
-</div>
-
-<div class="dica-card">
-<span class="dica-icone">📝</span>
-<h3>Anote seus gastos</h3>
-<p>Registrar tudo que você gasta evita surpresas desagradáveis no fim do mês.</p>
-</div>
-
-<div class="dica-card">
-<span class="dica-icone">⚠️</span>
-<h3>Cuidado com juros altos</h3>
-<p>Cartão de crédito rotativo e cheque especial estão entre os juros mais caros do mercado.</p>
-</div>
-
-<div class="dica-card">
-<span class="dica-icone">📊</span>
-<h3>Diversifique</h3>
-<p>Não coloque todo seu dinheiro numa única classe de investimento — divida o risco.</p>
-</div>
-
-</div>
-
+<p>Acompanhe os principais indicadores da economia brasileira e entenda o que cada um significa no seu dia a dia.</p>
 </section>
 
 <!-- INDICADORES -->
-<section class="indicadores">
+<section class="section">
+
+<div class="section-title">
+<h2>Indicadores econômicos</h2>
+<p>Valores mais recentes divulgados pelo Banco Central do Brasil. A seta mostra se o valor subiu (▲) ou caiu (▼) em relação à medição anterior.</p>
+</div>
+
+<div class="indicadores">
 
 <div class="indicador-card">
 <h3>Taxa Selic</h3>
 <p class="valor"><span id="selic">Carregando...</span><span class="trend" id="selic-trend"></span></p>
 <p class="data" id="selic-data"></p>
-<p class="explicacao">Taxa básica de juros da economia, definida pelo Copom.</p>
+<p class="explicacao">Taxa básica de juros da economia, definida pelo Copom. Valor em % ao ano.</p>
 </div>
 
 <div class="indicador-card">
 <h3>IPCA</h3>
 <p class="valor"><span id="ipca">Carregando...</span><span class="trend" id="ipca-trend"></span></p>
 <p class="data" id="ipca-data"></p>
-<p class="explicacao">Índice oficial de inflação do Brasil (variação mensal).</p>
+<p class="explicacao">Índice oficial de inflação do Brasil. Variação mensal.</p>
 </div>
 
 <div class="indicador-card">
 <h3>IGP-M</h3>
 <p class="valor"><span id="igpm">Carregando...</span><span class="trend" id="igpm-trend"></span></p>
 <p class="data" id="igpm-data"></p>
-<p class="explicacao">Índice usado para reajuste de aluguéis e contratos (variação mensal).</p>
+<p class="explicacao">Índice usado no reajuste de aluguéis e contratos. Variação mensal.</p>
 </div>
 
 <div class="indicador-card">
 <h3>Dólar comercial</h3>
 <p class="valor"><span id="dolar">Carregando...</span><span class="trend" id="dolar-trend"></span></p>
 <p class="data" id="dolar-data"></p>
-<p class="explicacao">Cotação de compra do dólar americano (PTAX, Banco Central).</p>
+<p class="explicacao">Cotação de compra do dólar americano, em reais.</p>
+</div>
+
 </div>
 
 </section>
 
 <!-- GRÁFICO BITCOIN -->
-<section class="grafico-section">
-<h2>Bitcoin — últimos 7 dias</h2>
-<p class="grafico-sub">Cotação em dólar (USD), atualizada em tempo real via Binance.</p>
+<section class="section section-alt">
+
+<div class="section-title">
+<h2>Bitcoin</h2>
+<p>Variação do preço de fechamento nos últimos 7 dias, em dólar (BTC/USD).</p>
+</div>
 
 <div class="grafico-card">
+<div class="grafico-area">
 <canvas id="bitcoin-chart"></canvas>
 </div>
+</div>
+
 </section>
 
-<p class="fonte">Fonte: Sistema Gerenciador de Séries Temporais (SGS) do Banco Central do Brasil.</p>
+<!-- DICAS -->
+<section class="section">
+
+<div class="section-title">
+<h2>Dicas de educação financeira</h2>
+<p>Hábitos simples que ajudam a organizar o dinheiro e a investir com mais segurança.</p>
+</div>
+
+<div class="dicas-lista">
+
+<div class="dica">
+<span class="dica-num">1</span>
+<div>
+<h3>Regra dos 50-30-20</h3>
+<p>Use 50% da renda para necessidades, 30% para desejos e 20% para poupança e investimentos.</p>
+</div>
+</div>
+
+<div class="dica">
+<span class="dica-num">2</span>
+<div>
+<h3>Monte uma reserva de emergência</h3>
+<p>Guarde de 3 a 6 meses das suas despesas em um investimento de fácil resgate.</p>
+</div>
+</div>
+
+<div class="dica">
+<span class="dica-num">3</span>
+<div>
+<h3>Anote seus gastos</h3>
+<p>Registrar tudo o que você gasta evita surpresas no fim do mês.</p>
+</div>
+</div>
+
+<div class="dica">
+<span class="dica-num">4</span>
+<div>
+<h3>Cuidado com juros altos</h3>
+<p>Cartão de crédito rotativo e cheque especial estão entre os juros mais caros do mercado.</p>
+</div>
+</div>
+
+<div class="dica">
+<span class="dica-num">5</span>
+<div>
+<h3>Diversifique</h3>
+<p>Não coloque todo o dinheiro em um único tipo de investimento. Dividir reduz o risco.</p>
+</div>
+</div>
+
+</div>
+
+<p class="fonte">Fontes: Sistema Gerenciador de Séries Temporais (SGS) do Banco Central do Brasil, para os indicadores; Binance, para o Bitcoin.</p>
+
+</section>
 
 <!-- FOOTER -->
 <footer>

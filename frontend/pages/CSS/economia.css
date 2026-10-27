@@ -77,10 +77,10 @@ nav a.active{
 
 /* HERO */
 .hero{
-    padding: 60px 8%;
-    text-align: center;
     background: #18372C;
     color: white;
+    padding: 60px 8%;
+    text-align: center;
 }
 
 .hero h1{
@@ -90,146 +90,166 @@ nav a.active{
 
 .hero p{
     color: #cfe3d8;
-    max-width: 600px;
+    max-width: 620px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
-/* DICAS */
-.dicas{
-    padding: 60px 8% 20px;
+/* SEÇÕES */
+.section{
+    padding: 60px 8%;
 }
 
-.dicas h2{
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.dicas-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 18px;
-}
-
-.dica-card{
+.section-alt{
     background: white;
-    border-radius: 14px;
-    padding: 22px;
+}
+
+.section-title{
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    transition: .2s;
+    max-width: 640px;
+    margin: 0 auto 35px;
 }
 
-.dica-card:hover{
-    transform: translateY(-4px);
-}
-
-.dica-icone{
-    font-size: 28px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.dica-card h3{
-    font-size: 15px;
+.section-title h2{
+    font-size: 26px;
     margin-bottom: 8px;
 }
 
-.dica-card p{
-    font-size: 13px;
+.section-title p{
     color: #56655d;
-    line-height: 1.5;
+    line-height: 1.6;
+    font-size: 15px;
 }
 
 /* INDICADORES */
 .indicadores{
-    padding: 40px 8% 60px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 20px;
-}
-
-.trend{
-    font-size: 16px;
-    margin-left: 6px;
-}
-
-.trend.up{
-    color: #4FA37B;
-}
-
-.trend.down{
-    color: #ff6b6b;
-}
-
-/* GRÁFICO BITCOIN */
-.grafico-section{
-    padding: 0 8% 60px;
-}
-
-.grafico-section h2{
-    text-align: center;
-    margin-bottom: 6px;
-}
-
-.grafico-sub{
-    text-align: center;
-    font-size: 13px;
-    color: #7c8b84;
-    margin-bottom: 25px;
-}
-
-.grafico-card{
-    background: white;
-    border-radius: 16px;
-    padding: 25px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
-    height: 320px;
 }
 
 .indicador-card{
-    background: #224638;
-    color: white;
-    padding: 25px;
-    border-radius: 14px;
-    text-align: center;
-    transition: .2s;
-}
-
-.indicador-card:hover{
-    transform: translateY(-5px);
+    background: white;
+    border: 1px solid #d7ddd9;
+    border-top: 4px solid #4FA37B;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 .indicador-card h3{
-    font-size: 16px;
-    color: #cfe3d8;
-    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #56655d;
+    margin-bottom: 12px;
 }
 
 .indicador-card .valor{
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 32px;
+    font-weight: 700;
+    color: #18372C;
     margin-bottom: 4px;
 }
 
 .indicador-card .data{
     font-size: 12px;
-    color: #a9c2b6;
-    margin-bottom: 12px;
+    color: #7c8b84;
+    margin-bottom: 16px;
+    min-height: 16px;
 }
 
 .indicador-card .explicacao{
     font-size: 13px;
-    color: #cfe3d8;
-    line-height: 1.4;
+    line-height: 1.5;
+    color: #56655d;
+    border-top: 1px solid #e7ebe6;
+    padding-top: 14px;
+    margin-top: auto;
+}
+
+.trend{
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.trend.up{
+    color: #3b8f66;
+}
+
+.trend.down{
+    color: #d64545;
+}
+
+/* GRÁFICO BITCOIN */
+.grafico-card{
+    background: #F5F7F4;
+    border: 1px solid #d7ddd9;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.grafico-area{
+    position: relative;
+    height: 320px;
+}
+
+/* DICAS */
+.dicas-lista{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dica{
+    display: flex;
+    gap: 16px;
+    background: white;
+    border: 1px solid #d7ddd9;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.dica-num{
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #18372C;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dica h3{
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.dica p{
+    font-size: 13px;
+    line-height: 1.5;
+    color: #56655d;
 }
 
 .fonte{
+    max-width: 1100px;
+    margin: 35px auto 0;
     text-align: center;
     font-size: 12px;
+    line-height: 1.5;
     color: #7c8b84;
-    padding-bottom: 40px;
 }
 
 /* FOOTER */
@@ -269,5 +289,21 @@ footer{
 @media (max-width: 768px) {
     nav {
         display: none;
+    }
+
+    .section{
+        padding: 45px 6%;
+    }
+
+    .hero h1{
+        font-size: 28px;
+    }
+
+    .dicas-lista{
+        grid-template-columns: 1fr;
+    }
+
+    .grafico-area{
+        height: 260px;
     }
 }
