@@ -80,52 +80,128 @@ nav a.active {
 
 /* HERO */
 .hero {
+    background: #18372C;
+    color: white;
     padding: 60px 8%;
     text-align: center;
 }
 
-/* CARDS */
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #cfe3d8;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* SEÇÕES */
+.section {
+    padding: 60px 8%;
+}
+
+.section-alt {
+    background: white;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 35px;
+}
+
+.section-title h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: #56655d;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* TIPOS DE INVESTIMENTO */
 .invest-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 20px;
-    padding: 40px 8%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .card {
     background: #224638;
     color: white;
-    padding: 20px;
+    padding: 24px;
     border-radius: 12px;
-    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-/* VIDEOS */
-.videos {
-    padding: 60px 8%;
-    text-align: center;
+.card > p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cfe3d8;
+    margin-bottom: 18px;
+}
+
+.card-info {
+    list-style: none;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 14px;
+}
+
+.card-info li {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.card-info li span {
+    display: block;
+    color: #4FA37B;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* VIDEOAULAS */
+.group-title {
+    max-width: 1100px;
+    margin: 0 auto 16px;
+    font-size: 17px;
+    padding-left: 10px;
+    border-left: 4px solid #4FA37B;
 }
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 35px;
 }
 
 .video-card {
     background: #224638;
     color: white;
-    padding: 15px;
     border-radius: 12px;
-    cursor: pointer;
-    transition: 0.2s;
-    display: block;
+    overflow: hidden;
     text-decoration: none;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
 }
 
 .video-card:hover {
@@ -134,24 +210,95 @@ nav a.active {
 
 .video-thumb {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
+    background: #000;
 }
 
 .video-thumb img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    transition: 0.3s;
 }
 
-.video-card:hover .video-thumb img {
-    transform: scale(1.1);
+.video-info {
+    padding: 16px;
 }
 
-.video-card h3 {
+.tag {
+    display: inline-block;
+    background: #4FA37B;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.video-info h4 {
     font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.video-info p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #cfe3d8;
+}
+
+/* CONTINUE ESTUDANDO */
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.topic-card {
+    background: white;
+    border: 1px solid #d7ddd9;
+    border-radius: 12px;
+    padding: 22px;
+    text-decoration: none;
+    color: #18372C;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+}
+
+.topic-card:hover {
+    border-color: #4FA37B;
+}
+
+.topic-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.topic-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #56655d;
+    margin-bottom: 14px;
+}
+
+.topic-link {
+    margin-top: auto;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4FA37B;
+}
+
+.aviso {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    font-size: 12px;
+    color: #7c8b84;
     text-align: center;
+    line-height: 1.5;
 }
 
 /* FOOTER */
@@ -197,7 +344,14 @@ footer {
     display: none;
   }
 
-  .invest-grid,
+  .section {
+    padding: 45px 6%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
   .video-grid {
     grid-template-columns: 1fr;
   }
