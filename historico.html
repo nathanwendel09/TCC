@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico - FinanceNews</title>
+    <link rel="stylesheet" href="frontend/pages/CSS/noticias.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="home.html" class="logo">
+        <img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
+        <span>FinanceNews</span>
+    </a>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
+            <li><a href="indicacoes.html">Indicações</a></li>
+            <li><a href="investimentos.html">Investimentos</a></li>
+            <li><a href="economia.html">Economia</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <!-- será preenchido pelo auth.js -->
+        <a href="login.html" class="btn">Login</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Seu Histórico</h1>
+    <p>Notícias que você já visualizou</p>
+</section>
+
+<section class="section">
+    <div id="historico-vazio" style="text-align: center; padding: 60px 0; display: none;">
+        <p style="font-size: 18px; color: #666;">Você ainda não clicou em nenhuma notícia.</p>
+        <a href="noticias.html" class="btn" style="margin-top: 20px;">Ver notícias</a>
+    </div>
+
+    <div id="historico-grid" class="noticias-grid">
+        <!-- cards do histórico -->
+    </div>
+</section>
+
+<footer>
+    <h2>FinanceNews</h2>
+    <div class="social-section">
+        <h3>Conheça nossas redes sociais</h3>
+        <p>Acompanhe novidades e conteúdos exclusivos</p>
+        <div class="social">
+            <a href="https://instagram.com/finnancesnc" target="_blank" rel="noopener noreferrer">
+                <img src="frontend/pages/CSS/assets/img/instagram-outline.svg" alt="Instagram">
+            </a>
+        </div>
+    </div>
+    <p>© 2026 Todos os direitos reservados.</p>
+</footer>
+
+<!-- Firebase (necessário pro botão Sair) -->
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script>
+    // Configuração mínima só pro signOut funcionar
+    const firebaseConfig = {
+        apiKey: "AIzaSyAOA2gCB688Llhlv4TYS50H7Ypo3A1M85I",
+        authDomain: "finance-news-a2d1b.firebaseapp.com",
+        projectId: "finance-news-a2d1b",
+        appId: "1:108697585343:web:bcaec2ca794c99d477280a"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="backend/auth.js"></script>
+<script src="backend/historico.js"></script>
+</body>
+</html>

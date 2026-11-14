@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - FinanceNews</title>
+    <link rel="stylesheet" href="frontend/pages/CSS/noticias.css">
+    <link rel="stylesheet" href="frontend/pages/CSS/auth.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="home.html" class="logo">
+        <img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
+        <span>FinanceNews</span>
+    </a>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="noticias.html" class="active" aria-current="page">Notícias</a></li>
+            <li><a href="indicacoes.html">Indicações</a></li>
+            <li><a href="investimentos.html">Investimentos</a></li>
+            <li><a href="economia.html">Economia</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <a href="login.html" class="btn">Login</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Notícias do Mercado</h1>
+    <p>As principais notícias sobre economia, investimentos e mercado financeiro, atualizadas automaticamente.</p>
+</section>
+
+<!-- FILTROS RÁPIDOS -->
+<section class="filtros">
+    <button class="filtro-btn" data-category="todas">Todas</button>
+    <button class="filtro-btn active" data-category="business">Negócios</button>
+    <button class="filtro-btn" data-category="technology">Tecnologia</button>
+    <button class="filtro-btn" data-category="politics">Política</button>
+    <button class="filtro-btn" data-category="science">Ciência</button>
+    <button class="filtro-btn" data-category="health">Saúde</button>
+</section>
+</section>
+
+<!-- LISTA DE NOTÍCIAS -->
+<section class="section">
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Carregando notícias...</p>
+    </div>
+
+    <div id="erro" class="erro" style="display: none;"></div>
+
+    <div id="noticias-grid" class="noticias-grid">
+        <!-- cards serão inseridos aqui via JS -->
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h2>FinanceNews</h2>
+
+    <div class="social-section">
+        <h3>Conheça nossas redes sociais</h3>
+        <p>Acompanhe novidades e conteúdos exclusivos</p>
+
+        <div class="social">
+            <a href="https://instagram.com/finnancesnc" target="_blank" rel="noopener noreferrer">
+                <img src="frontend/pages/CSS/assets/img/instagram-outline.svg" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <p>© 2026 Todos os direitos reservados.</p>
+</footer>
+
+<script src="backend/noticias.js"></script>
+<script src="backend/auth.js"></script>
+</body>
+</html>
