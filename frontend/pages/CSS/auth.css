@@ -100,3 +100,125 @@
 .dropdown-item.sair:hover {
     background: #fdf0ef;
 }
+
+/* ===== MENU DE USUARIO - FINANCENEWS ===== */
+
+.user-menu {
+    position: relative;
+}
+
+.user-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    transition: 0.25s ease;
+}
+
+.user-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    background: #4FA37B;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.user-arrow {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.user-btn[aria-expanded="true"] .user-arrow {
+    transform: rotate(180deg);
+}
+
+/* CARD SUSPENSO */
+
+.user-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 210px;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid rgba(24, 55, 44, 0.08);
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.22s ease;
+    z-index: 2000;
+}
+
+.user-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 6px;
+}
+
+.dropdown-header strong {
+    color: #18372C;
+    font-size: 14px;
+}
+
+.dropdown-header span {
+    color: #777777;
+    font-size: 12px;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: #18372C;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #f0f5f2;
+}
+
+.dropdown-item.sair {
+    color: #c0392b;
+}
+
+.dropdown-item.sair:hover {
+    background: #fdf0ef;
+}
