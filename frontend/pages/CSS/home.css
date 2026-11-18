@@ -474,3 +474,142 @@ footer > p {
       padding: 20px 8px;
   }
 }
+
+/* =========================
+   MENU LATERAL MOBILE
+========================= */
+
+/* Botão escondido no computador */
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Fundo escurecido */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    z-index: 1100;
+}
+
+/* Painel lateral */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(82%, 320px);
+    height: 100vh;
+    height: 100dvh;
+    background: #18372C;
+    z-index: 1101;
+    padding: 25px 22px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    visibility: hidden;
+    overflow-y: auto;
+}
+
+/* Cabeçalho do menu */
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #4FA37B;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.mobile-menu-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Links */
+.mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-menu nav a {
+    display: block;
+    padding: 14px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.mobile-menu nav a:hover,
+.mobile-menu nav a.active {
+    background: #224638;
+    color: #4FA37B;
+}
+
+.mobile-menu nav .mobile-login {
+    margin-top: 20px;
+    border: 1px solid #4FA37B;
+    text-align: center;
+}
+
+/* Menu aberto */
+.mobile-menu.is-open {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.mobile-menu-overlay.is-open {
+    display: block;
+}
+
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+/* Exibir somente em celulares */
+@media (max-width: 768px) {
+
+    header {
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        width: 32px;
+        height: 36px;
+        flex-shrink: 0;
+    }
+
+    .mobile-menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: white;
+        border-radius: 3px;
+    }
+
+    header .logo {
+        margin-right: auto;
+    }
+
+    header > div {
+        flex-shrink: 0;
+    }
+}
+

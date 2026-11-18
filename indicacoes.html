@@ -7,35 +7,71 @@
 <title>Indicações</title>
 <link rel="stylesheet" href="frontend/pages/CSS/indicacoes.css">
 <link rel="stylesheet" href="frontend/pages/CSS/auth.css">
+<link rel="stylesheet" href="frontend/pages/CSS/home.css"> 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
+    <button
+        class="mobile-menu-toggle"
+        id="mobileMenuToggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-<a href="home.html" class="logo">
-<img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
-<span>FinanceNews</span>
-</a>
+    <a href="home.html" class="logo">
+        <img src="frontend/pages/CSS/assets/img/logo_2.png" alt="Logo FinanceNews">
+        <span>FinanceNews</span>
+    </a>
 
-<nav>
-<ul>
-<li><a href="home.html">Home</a></li>
-<li><a href="noticias.html">Notícias</a></li>
-<li><a href="indicacoes.html" class="active" aria-current="page">Indicações</a></li>
-<li><a href="investimentos.html">Investimentos</a></li>
-<li><a href="economia.html">Economia</a></li>
-</ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="noticias.html" class="active" aria-current="page">Notícias</a></li>
+            <li><a href="indicacoes.html">Indicações</a></li>
+            <li><a href="investimentos.html">Investimentos</a></li>
+            <li><a href="economia.html">Economia</a></li>
+        </ul>
+    </nav>
 
-<div>
-<a href="login.html" class="btn">Login</a>
-</div>
-
-
+    <div>
+        <a href="login.html" class="btn">Login</a>
+    </div>
 </header>
+
+<button
+    class="mobile-menu-overlay"
+    id="mobileMenuOverlay"
+    type="button"
+    aria-label="Fechar menu"
+></button>
+
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-header">
+        <span>FinanceNews</span>
+        <button type="button" id="mobileMenuClose" aria-label="Fechar menu">
+            &times;
+        </button>
+    </div>
+
+    <nav aria-label="Navegação mobile">
+        <a href="home.html">Home</a>
+        <a href="noticias.html" class="active">Notícias</a>
+        <a href="indicacoes.html">Indicações</a>
+        <a href="investimentos.html">Investimentos</a>
+        <a href="economia.html">Economia</a>
+        <a href="login.html" class="mobile-login">Login</a>
+    </nav>
+</aside>
+
 
 <!-- CARROSSEL -->
 <section class="carousel">
@@ -194,6 +230,7 @@ Ensina como o dinheiro funciona na prática e a diferença entre trabalhar por d
 
 <script src="backend/indicacacoes.js"></script>
 <script src="backend/auth.js"></script>
+<script src="backend/menu-mobile.js"></script>
 
 </body>
 </html>

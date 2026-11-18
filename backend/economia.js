@@ -1,16 +1,17 @@
+
 // ======================
-// INDICADORES ECONÔMICOS (API do Banco Central - SGS)
-// Documentação: https://dadosabertos.bcb.gov.br/dataset/20399-taxa-selic-definida-pelo-copom
-// Não precisa de chave/cadastro.
+// INDICADORES ECONÔMICOS
+// API do Banco Central do Brasil (SGS)
 // ======================
 
 const SERIES = {
-    selic: 432,   // Meta da Taxa Selic
-    ipca: 433,    // IPCA (variação mensal)
-    igpm: 189,    // IGP-M (variação mensal)
-    dolar: 1      // Dólar comercial (compra)
+    selic: 432,
+    ipca: 433,
+    igpm: 189,
+    dolar: 1
 };
 
+// Formata os números no padrão brasileiro
 function formatarNumero(valor) {
     return Number(valor).toLocaleString("pt-BR", {
         minimumFractionDigits: 2,
@@ -18,15 +19,26 @@ function formatarNumero(valor) {
     });
 }
 
-async function carregarIndicador(id, codigoSerie, prefixo, sufixo) {
+// Carrega os indicadores econômicos
+async function carregarIndicador(id, codigoSerie, prefixo, sufixo, rotuloData) {
     const valorEl = document.getElementById(id);
     const dataEl = document.getElementById(id + "-data");
     const trendEl = document.getElementById(id + "-trend");
 
+    if (!valorEl || !dataEl || !trendEl) {
+        console.error(`Elementos não encontrados para o indicador: ${id}`);
+        return;
+    }
+
     try {
-        // pega os 2 últimos valores pra dar pra comparar e mostrar a seta
         const url = `https://api.bcb.gov.br/dados/serie/bcdata.sgs.${codigoSerie}/dados/ultimos/2?formato=json`;
+
         const res = await fetch(url);
+
+        if (!res.ok) {
+            throw new Error("Erro na resposta da API do Banco Central");
+        }
+
         const data = await res.json();
 
         if (!data || data.length === 0) {
@@ -36,9 +48,14 @@ async function carregarIndicador(id, codigoSerie, prefixo, sufixo) {
         const ultimo = data[data.length - 1];
         const anterior = data.length > 1 ? data[data.length - 2] : null;
 
-        valorEl.textContent = `${prefixo}${formatarNumero(ultimo.valor)}${sufixo}`;
-        dataEl.textContent = `Atualizado em ${ultimo.data}`;
+        // Exibe o valor
+        valorEl.textContent =
+            `${prefixo}${formatarNumero(ultimo.valor)}${sufixo}`;
 
+        // Exibe a data com o rótulo adequado
+        dataEl.textContent = `${rotuloData}: ${ultimo.data}`;
+
+        // Compara com o valor anterior
         if (anterior) {
             const subiu = Number(ultimo.valor) > Number(anterior.valor);
             const desceu = Number(ultimo.valor) < Number(anterior.valor);
@@ -56,43 +73,84 @@ async function carregarIndicador(id, codigoSerie, prefixo, sufixo) {
         }
 
     } catch (err) {
-        console.log(`Erro ao carregar indicador ${id}:`, err);
+        console.error(`Erro ao carregar indicador ${id}:`, err);
+
         valorEl.textContent = "Indisponível";
         dataEl.textContent = "Não foi possível carregar agora";
+        trendEl.textContent = "";
     }
 }
 
-carregarIndicador("selic", SERIES.selic, "", "%");
-carregarIndicador("ipca", SERIES.ipca, "", "%");
-carregarIndicador("igpm", SERIES.igpm, "", "%");
-carregarIndicador("dolar", SERIES.dolar, "R$ ", "");
+// Executa o carregamento dos indicadores
+carregarIndicador("selic", SERIES.selic, "", "%", "Vigência");
+
+carregarIndicador("ipca", SERIES.ipca, "", "%", "Referência");
+
+carregarIndicador("igpm", SERIES.igpm, "", "%", "Referência");
+
+carregarIndicador("dolar", SERIES.dolar, "R$ ", "", "Data da cotação");
 
 
 // ======================
-// GRÁFICO DO BITCOIN (API da Binance - pública, sem chave)
-// Documentação: https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data
+// GRÁFICO DO BITCOIN
+// API pública da Binance
 // ======================
 
 async function carregarGraficoBitcoin() {
     const canvas = document.getElementById("bitcoin-chart");
 
+    if (!canvas) {
+        console.log("Gráfico do Bitcoin não encontrado nesta página.");
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error("Biblioteca Chart.js não foi carregada.");
+        return;
+    }
+
     try {
         const url = "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=7";
+
         const res = await fetch(url);
+
+        if (!res.ok) {
+            throw new Error("Erro na resposta da API Binance");
+        }
+
         const dados = await res.json();
 
-        // cada item: [ openTime, open, high, low, close, volume, closeTime, ... ]
+        if (!dados || dados.length === 0) {
+            throw new Error("Sem dados retornados pela Binance");
+        }
+
+        // Datas do gráfico
         const labels = dados.map((vela) => {
-            const d = new Date(vela[0]);
-            return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+            const data = new Date(vela[0]);
+
+            return data.toLocaleDateString("pt-BR", {
+                day: "2-digit",
+                month: "2-digit",
+                timeZone: "UTC"
+            });
         });
 
-        const valores = dados.map((vela) => Number(vela[4])); // preço de fechamento
+        // Valores de fechamento
+        const valores = dados.map((vela) => Number(vela[4]));
+
+        // Evita criar dois gráficos no mesmo canvas
+        const graficoExistente = Chart.getChart(canvas);
+
+        if (graficoExistente) {
+            graficoExistente.destroy();
+        }
 
         new Chart(canvas, {
             type: "line",
+
             data: {
                 labels: labels,
+
                 datasets: [{
                     label: "Bitcoin (US$)",
                     data: valores,
@@ -104,16 +162,22 @@ async function carregarGraficoBitcoin() {
                     tension: 0.3
                 }]
             },
+
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+
                 plugins: {
-                    legend: { display: false }
+                    legend: {
+                        display: false
+                    }
                 },
+
                 scales: {
                     y: {
                         ticks: {
-                            callback: (valor) => "US$ " + Number(valor).toLocaleString("pt-BR")
+                            callback: (valor) =>
+                                "US$ " + Number(valor).toLocaleString("pt-BR")
                         }
                     }
                 }
@@ -121,12 +185,21 @@ async function carregarGraficoBitcoin() {
         });
 
     } catch (err) {
-        console.log("Erro ao carregar gráfico do Bitcoin:", err);
+        console.error("Erro ao carregar gráfico do Bitcoin:", err);
+
         const contexto = canvas.getContext("2d");
+
+        contexto.clearRect(0, 0, canvas.width, canvas.height);
         contexto.font = "14px Inter";
         contexto.fillStyle = "#7c8b84";
-        contexto.fillText("Não foi possível carregar o gráfico agora.", 10, 30);
+
+        contexto.fillText(
+            "Não foi possível carregar o gráfico agora.",
+            10,
+            30
+        );
     }
 }
 
+// Carrega o gráfico
 carregarGraficoBitcoin();
