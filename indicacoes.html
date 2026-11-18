@@ -35,8 +35,8 @@
     <nav>
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="noticias.html" class="active" aria-current="page">Notícias</a></li>
-            <li><a href="indicacoes.html">Indicações</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
+            <li><a href="indicacoes.html" class="active" aria-current="page">Indicações</a></li>
             <li><a href="investimentos.html">Investimentos</a></li>
             <li><a href="economia.html">Economia</a></li>
         </ul>
@@ -64,8 +64,8 @@
 
     <nav aria-label="Navegação mobile">
         <a href="home.html">Home</a>
-        <a href="noticias.html" class="active">Notícias</a>
-        <a href="indicacoes.html">Indicações</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="indicacoes.html" class="active">Indicações</a>
         <a href="investimentos.html">Investimentos</a>
         <a href="economia.html">Economia</a>
         <a href="login.html" class="mobile-login">Login</a>
@@ -79,7 +79,7 @@
 <div class="slide active">
 <img src="frontend/pages/CSS/assets/img/slide-1.jpg" alt="">
 <div class="slide-text">
-<h1>Frase</h1>
+<h1>Aprenda mais sobre o mercado financeiro.</h1>
 <button class="btn">Saiba mais</button>
 </div>
 </div>
@@ -188,27 +188,6 @@ Ensina como o dinheiro funciona na prática e a diferença entre trabalhar por d
 </div>
 </section>
 
-<script>
-    const livrosTrack = document.getElementById("livros-track");
-    const livrosPrev = document.getElementById("livros-prev");
-    const livrosNext = document.getElementById("livros-next");
-
-    function larguraDoScroll() {
-        const primeiroCard = livrosTrack.querySelector(".book-card");
-        const estilo = getComputedStyle(livrosTrack);
-        const gap = parseInt(estilo.gap) || 20;
-        return primeiroCard.offsetWidth + gap;
-    }
-
-    livrosNext.addEventListener("click", () => {
-        livrosTrack.scrollBy({ left: larguraDoScroll(), behavior: "smooth" });
-    });
-
-    livrosPrev.addEventListener("click", () => {
-        livrosTrack.scrollBy({ left: -larguraDoScroll(), behavior: "smooth" });
-    });
-</script>
-
 <!-- FOOTER -->
 <footer>
 <h2>FinanceNews</h2>
@@ -228,7 +207,7 @@ Ensina como o dinheiro funciona na prática e a diferença entre trabalhar por d
 <p>© 2026 Todos os direitos reservados.</p>
 </footer>
 
-<script src="backend/indicacacoes.js"></script>
+<script src="backend/indicacoes.js"></script>
 <script src="backend/auth.js"></script>
 <script src="backend/menu-mobile.js"></script>
 
